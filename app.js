@@ -115,9 +115,7 @@ const App = (() => {
       const x = pad.left + gap * i + (gap - barW) / 2;
       const y = pad.top + ph - barH;
       ctx.fillStyle = '#0a0a0a';
-      ctx.beginPath();
-      ctx.roundRect(x, y, barW, barH, 2);
-      ctx.fill();
+      ctx.fillRect(x, y, barW, barH);
     });
 
     // X轴标签

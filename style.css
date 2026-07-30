@@ -179,8 +179,8 @@ body {
   margin-left: var(--nav-width);
   flex: 1;
   padding: 32px 40px;
-  max-width: calc(100vw - var(--nav-width));
-  overflow-x: hidden;
+  width: calc(100vw - var(--nav-width));
+  overflow-x: auto;
 }
 
 /* ---------- Module Header ---------- */
@@ -365,6 +365,8 @@ body {
 .heatmap-container {
   overflow-x: auto;
   padding: 4px 0;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
 }
 
 .heatmap-grid {
@@ -734,33 +736,101 @@ body {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-  .sidebar {
-    width: 60px;
-    min-width: 60px;
-    padding: 16px 0;
+  html {
+    font-size: 16px;
   }
 
-  .sidebar-logo h1,
-  .sidebar-logo .subtitle,
+  .app-container {
+    flex-direction: column;
+    padding-bottom: 70px;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    min-width: auto;
+    flex-direction: row;
+    border-right: none;
+    border-top: 1px solid var(--border);
+    padding: 0;
+    z-index: 1000;
+    background: var(--bg);
+  }
+
+  .sidebar-logo,
   .sidebar-date,
-  .nav-link span:not(.nav-icon),
-  .nav-count,
   .sidebar-footer {
     display: none;
   }
 
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    flex: none;
+    height: 100%;
+  }
+
+  .nav-item {
+    margin-bottom: 0;
+    flex: 1;
+    height: 100%;
+  }
+
   .nav-link {
+    flex-direction: column;
     justify-content: center;
-    padding: 12px;
+    align-items: center;
+    padding: 6px 4px;
+    height: 100%;
+    gap: 2px;
+  }
+
+  .nav-link .nav-icon {
+    font-size: 1.3rem;
+    width: auto;
+  }
+
+  .nav-link span:not(.nav-icon) {
+    display: block;
+    font-size: 0.65rem;
+  }
+
+  .nav-link .nav-count {
+    display: none;
   }
 
   .main-content {
-    margin-left: 60px;
+    margin-left: 0;
+    width: 100%;
     padding: 20px 16px;
+    overflow-x: hidden;
+  }
+
+  .module-header h2 {
+    font-size: 1.5rem;
   }
 
   .form-row {
     flex-direction: column;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 12px 24px;
   }
 }
 
