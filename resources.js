@@ -82,7 +82,7 @@ const MODULE_RESOURCES = {
         label: "色彩",
         resources: [
           { title: "色彩理论基础：色相/明度/饱和度", url: "https://www.bilibili.com/video/BV1Qs411q7Tx", source: "B站", duration: "30分钟", tip: "一张色环搞定90%的配色问题" },
-          { title: "光影与色彩：冷暖对比实战", url: "https://www.bilibili.com/video/BV1Fx411y7Pk", source: "B站", duration: "26分钟", tip: "为什么你的画总感觉"灰"？" },
+          { title: "光影与色彩：冷暖对比实战", url: "https://www.bilibili.com/video/BV1Fx411y7Pk", source: "B站", duration: "26分钟", tip: "为什么你的画总感觉‘灰’？" },
           { title: "配色实战：如何找到好看的色卡", url: "https://www.bilibili.com/video/BV1kW411C7jR", source: "B站", duration: "18分钟", tip: "从照片/电影/名画中提取色卡" },
           { title: "Marco Bucci: 10 Minutes to Better Painting", url: "https://www.youtube.com/playlist?list=PLR2NSBSj4JiLP7D2QbyP3B1BFUE_v6u3J", source: "YouTube", duration: "系列", tip: "10分钟一集，色彩和光影神课" },
         ]
