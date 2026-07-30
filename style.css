@@ -1,0 +1,20 @@
+/* 1. 全局重置：去掉浏览器默认的边距 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 让元素大小计算更符合直觉 */
+}
+
+/* 2. 设置页面背景色和字体 */
+body {
+    background-color: #f4f4f4; /* 浅灰色背景，保护眼睛 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 优先使用系统默认字体，看起来更现代 */
+    color: #333; /* 深灰色文字，比纯黑更柔和 */
+    line-height: 1.6; /* 增加行高，阅读更舒适 */
+}
+
+/* 3. 简单的链接样式（可选） */
+a {
+    text-decoration: none; /* 去掉下划线 */
+    color: #007bff; /* 蓝色链接 */
+}
