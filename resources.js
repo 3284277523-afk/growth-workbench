@@ -14,7 +14,7 @@ const MODULE_RESOURCES = {
         label: "第一本·认知破局",
         unlockDays: 0,
         resources: [
-          { title: "📖 《认知觉醒》— 开启自我改变的元认知", url: "https://www.bilibili.com/video/BV1XY411J7aG/", source: "B站", duration: "约7天", tip: "周岭著。为什么懂得很多道理却过不好？这本书解决'知道但做不到'的核心问题。看完做：写3条最触动你的认知+1个立刻行动" },
+          { title: "📖 《认知觉醒》— 开启自我改变的元认知", url: "https://www.bilibili.com/video/BV1G7TrzBEm5/", source: "B站", duration: "3小时", tip: "全网唯一！3小时一次性讲透周岭神作《认知觉醒》&《认知驱动》，看完做：写3条最触动你的认知+1个立刻行动" },
           { title: "配套：周岭《认知觉醒》全书解读视频", url: "https://www.bilibili.com/search?keyword=%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92%20%E8%A7%A3%E8%AF%BB", source: "B站搜索", duration: "系列", tip: "B站搜'认知觉醒 解读'有大量优质UP主逐章解读，挑一个跟完即可" },
         ]
       },
@@ -127,10 +127,10 @@ const MODULE_RESOURCES = {
         label: "基础笔画",
         unlockDays: 0,
         resources: [
-          { title: "硬笔书法零基础速成教程-基本笔画系列", url: "https://www.iqiyi.com/so/q_%E7%A1%AC%E7%AC%94%E4%B9%A6%E6%B3%95%E5%85%8D%E8%B4%B9%E6%95%99%E7%A8%8B", source: "爱奇艺", duration: "系列", tip: "从垂露竖到横折钩，每个笔画独立视频讲解" },
-          { title: "硬笔书法基础练习：常用基本笔画规范写法", url: "https://m.ixigua.com/video/7042859389887185416", source: "西瓜视频", duration: "15分钟", tip: "老师逐笔示范28个基本笔画，跟练效果极佳" },
-          { title: "硬笔基本笔画教学：竖弯钩详细讲解", url: "https://www.iqiyi.com/v_29zcf3zlwxc.html", source: "爱奇艺", duration: "8分钟", tip: "单笔画精讲，适合每天攻克一个笔画" },
-          { title: "如何练好字——硬笔书法自学练字指南（附好书推荐）", url: "https://zhuanlan.zhihu.com/p/365532061", source: "知乎", duration: "图文", tip: "从选笔执笔到笔画章法的完整自学路线，知乎万赞" },
+          { title: "硬笔书法零基础速成教程-基本笔画系列", url: "https://www.bilibili.com/video/BV1T4411u7uZ/", source: "B站", duration: "系列", tip: "从垂露竖到横折钩，每个笔画独立视频讲解，适合每天一个" },
+          { title: "硬笔书法基础练习：常用基本笔画规范写法", url: "https://www.bilibili.com/video/BV1H5411w7RG/", source: "B站", duration: "系列", tip: "28个基本笔画逐一示范，跟练效果极佳" },
+          { title: "硬笔基本笔画教学：竖弯钩详细讲解", url: "https://www.bilibili.com/video/BV1CV4y1H7Ei/", source: "B站", duration: "8分钟", tip: "单笔画精讲，适合每天攻克一个笔画" },
+          { title: "零基础硬笔书法入门教程2026新版（从执笔到书写一手好字）", url: "https://www.bilibili.com/video/BV1Gig16kE3x/", source: "B站", duration: "系列", tip: "2026年7月最新，从选笔执笔到笔画章法的完整自学路线" },
         ]
       },
       {
@@ -140,7 +140,7 @@ const MODULE_RESOURCES = {
         resources: [
           { title: "田英章间架结构28法精讲", url: "https://www.bilibili.com/cheese/play/ep2280307", source: "B站课堂", duration: "28课时", tip: "硬笔书法泰斗田英章系统课程，从笔画搭配到整体布局" },
           { title: "硬笔楷书间架结构58法", url: "https://www.bilibili.com/cheese/play/ep131212", source: "B站课堂", duration: "58课时", tip: "中国硬笔书协会员主讲，学员3万+，58种结构规律全覆盖" },
-          { title: "硬笔书法超全面短横讲解（含结构技巧）", url: "https://m.ixigua.com/video/6984278432074957312", source: "西瓜视频", duration: "10分钟", tip: "从一个横画讲透间架结构的核心原理" },
+          { title: "硬笔书法楷书基本笔画精讲28集（含短横结构技巧）", url: "https://www.bilibili.com/video/BV1iy4y1u775/", source: "B站", duration: "28集", tip: "28集系统精讲楷书基本笔画，短横写法与间架结构一网打尽" },
         ]
       },
       {
@@ -148,9 +148,9 @@ const MODULE_RESOURCES = {
         label: "章法布局",
         unlockDays: 21,
         resources: [
-          { title: "如何练好字——硬笔书法自学练字指南（章法篇）", url: "https://zhuanlan.zhihu.com/p/365532061", source: "知乎", duration: "图文", tip: "从选纸落款到整体布局的章法完整指导" },
-          { title: "硬笔书法网（字帖下载+章法教程）", url: "https://shufawang.cn/yingbi.html", source: "书法网", duration: "图文", tip: "免费字帖下载+章法布局系统教程" },
-          { title: "硬笔书法视频教程大全（免费网盘）", url: "https://www.tgoos.com/17769", source: "网盘", duration: "合集", tip: "李放鸣、李天生等名家教程合集，含章法布局专题" },
+          { title: "硬笔书法章法布局技巧大全", url: "https://www.douyin.com/shipin/7412110567505659931", source: "抖音", duration: "系列", tip: "从选纸落款到整体布局，99%的人都不知道的章法技巧" },
+          { title: "实用硬笔书写章法系统知识（11课时）", url: "https://www.bilibili.com/cheese/play/ep1540527", source: "B站课堂", duration: "11课时", tip: "基于硬笔字的实用书写，系统讲解章法布局知识" },
+          { title: "硬笔书法章法布局100个技巧", url: "https://www.douyin.com/zhuanti/7358333918355032064", source: "抖音", duration: "系列", tip: "章法技巧分享，快速提升卷面布局能力" },
         ]
       }
     ]
@@ -190,7 +190,7 @@ const MODULE_RESOURCES = {
         unlockDays: 7,
         resources: [
           { title: "零基础自学画画50集（抓形篇）", url: "https://www.bilibili.com/video/BV1xc3B6jEP8/", source: "B站", duration: "50集", tip: "【第6-12集】几何概括法+负空间观察，快速抓准形体" },
-          { title: "2026零基础人物素描完整攻略：三庭五眼、人体比例", url: "https://zhuanlan.zhihu.com/p/2061764613264372910", source: "知乎", duration: "图文", tip: "7天吃透人头比例，告别五官失衡、形体僵硬" },
+          { title: "人体绘画教程：从人体比例到动态全掌握", url: "https://www.bilibili.com/video/BV1oXiSBoEjB/", source: "B站", duration: "系列", tip: "从三庭五眼到人体比例动态，真正从零教会你的人体教程" },
         ]
       },
       {
@@ -199,7 +199,7 @@ const MODULE_RESOURCES = {
         unlockDays: 21,
         resources: [
           { title: "零基础自学画画50集（临摹篇）", url: "https://www.bilibili.com/video/BV1xc3B6jEP8/", source: "B站", duration: "50集", tip: "【第13-20集】五官临摹+大师作品临摹技巧" },
-          { title: "全网最全盘点B站绘画区UP主推荐", url: "https://zhuanlan.zhihu.com/p/393783507", source: "知乎", duration: "图文", tip: "马克笔/素描/插画/板绘各领域顶流UP主汇总" },
+          { title: "B站绘画区宝藏UP主推荐合集（含色彩与光影方向）", url: "https://www.douyin.com/video/7622917023182675174", source: "抖音", duration: "视频", tip: "整理B站绘画UP主推荐，从零基础入门到进阶提升全覆盖" },
         ]
       },
       {
@@ -208,7 +208,7 @@ const MODULE_RESOURCES = {
         unlockDays: 45,
         resources: [
           { title: "零基础自学画画50集（色彩篇）", url: "https://www.bilibili.com/video/BV1xc3B6jEP8/", source: "B站", duration: "50集", tip: "【第21-30集】色彩理论基础+冷暖对比+配色实战" },
-          { title: "B站12位绘画UP主推荐（含色彩类UP主）", url: "https://post.smzdm.com/p/ar6w36m7/", source: "什么值得买", duration: "图文", tip: "精选B站绘画教学UP主，含色彩与光影方向" },
+          { title: "B站绘画区宝藏UP主推荐合集（色彩与光影方向）", url: "https://www.douyin.com/video/7629416974355681722", source: "抖音", duration: "视频", tip: "从入门到进阶的宝藏绘画UP主，零成本提升画技" },
         ]
       },
       {
@@ -313,7 +313,7 @@ const MODULE_RESOURCES = {
         resources: [
           { title: "全122集零基础系统唱歌教学（腹式呼吸篇）", url: "https://www.bilibili.com/video/BV1F8326bExu/", source: "B站", duration: "122集", tip: "【片段精华 第3-5集】腹式呼吸技巧详解，吸气腹部外扩" },
           { title: "纯干货唱歌技巧：30天从零开始", url: "https://www.bilibili.com/video/BV1x8Eu6JE44/", source: "B站", duration: "系列", tip: "2026年6月新作，2400+播放，系统化唱歌教学" },
-          { title: "B站教学唱歌UP主推荐合集", url: "https://www.zhihu.com/question/322911950", source: "知乎", duration: "图文", tip: "知乎高赞推荐，含各阶段声乐UP主汇总" },
+          { title: "B站唱歌教学UP主推荐合集", url: "https://www.douyin.com/search/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%94%B1%E6%AD%8C%E6%95%99%E5%AD%A6up%E4%B8%BB%E6%8E%A8%E8%8D%90", source: "抖音", duration: "视频", tip: "声乐基础差必看的几位宝藏UP主，含自学唱歌正确顺序" },
         ]
       },
       {
@@ -372,8 +372,8 @@ const MODULE_RESOURCES = {
         unlockDays: 0,
         resources: [
           { title: "20分钟全身哑铃训练-全程站立-居家力量训练", url: "https://www.bilibili.com/video/BV1xkwtzLEmZ/", source: "B站", duration: "20分钟", tip: "2026年3月发布，间歇模式40秒锻炼+20秒休息，哑铃可用水瓶替代" },
-          { title: "30个家庭哑铃增肌动作教学（含计划安排）·卓叔", url: "https://www.zhihu.com/tardis/bd/art/618012404", source: "知乎", duration: "图文", tip: "涵盖胸肩背腿手臂腹部，视频末附训练计划模板" },
-          { title: "1个哑铃练全身！居家极简训练计划", url: "https://news.qq.com/rain/a/20250925A056HP00", source: "腾讯新闻", duration: "图文", tip: "一副哑铃练出完美线条，含热身+各部位动作详解" },
+          { title: "30个家庭哑铃增肌动作教学（含计划安排）·卓叔", url: "https://www.bilibili.com/video/BV1FY4y1y7Vh/", source: "B站", duration: "30个动作", tip: "B站最全！涵盖胸肩背腿手臂腹部，每个动作配分析讲解+训练计划模板" },
+          { title: "一副哑铃练遍全身，17分钟暴汗燃脂力量训练", url: "https://www.bilibili.com/video/BV19w5y6SEsz/", source: "B站", duration: "17分钟", tip: "2026年5月发布，适合新手减脂，一副哑铃练遍全身" },
         ]
       },
       {
@@ -382,8 +382,8 @@ const MODULE_RESOURCES = {
         unlockDays: 14,
         resources: [
           { title: "30分钟居家全身力量训练", url: "https://www.bilibili.com/video/BV17fZWBVEDR/", source: "B站", duration: "30分钟", tip: "2026年2月发布，8kg哑铃跟练，1700+播放" },
-          { title: "10个自重训练动作，在家练遍全身肌肉", url: "https://www.toutiao.com/article/7516841592880251407/", source: "头条", duration: "图文", tip: "从胸肩背到臀腿核心，渐进式训练体系" },
-          { title: "无器械懒人健身攻略（上肢/下肢/核心）", url: "https://www.sohu.com/a/974169731_122553620", source: "搜狐", duration: "图文", tip: "每个动作的发力要点+常见误区+进阶变式" },
+          { title: "无需器械！6个自重健身动作在家练遍全身", url: "https://www.bilibili.com/video/BV1By3C6HEUu/", source: "B站", duration: "40分钟", tip: "居家无器械自重训练，从胸肩背到臀腿核心全覆盖" },
+          { title: "12个自重训练动作，在家练出完美身材（无器械）", url: "https://www.youtube.com/watch?v=wE4pi9dg2Pk", source: "YouTube", duration: "15分钟", tip: "Chris Heria出品，5个自重动作练全身，全球千万粉丝的徒手健身大神" },
         ]
       },
       {
@@ -394,7 +394,7 @@ const MODULE_RESOURCES = {
           { title: "60分钟全身哑铃锻炼-无重复-居家力量训练", url: "https://www.bilibili.com/video/BV177cCe5Ezn/", source: "B站", duration: "60分钟", tip: "2025年发布，全站姿无重复练习，锻炼每个肌肉群" },
           { title: "40分钟全身哑铃锻炼-无需重复-适合所有健身水平", url: "https://www.bilibili.com/video/BV1n4cQegEEm/", source: "B站", duration: "40分钟", tip: "2025年发布，增强和调理全身，保持新鲜和挑战性" },
           { title: "弹力带教程合集（26个动作详细讲解）", url: "https://www.bilibili.com/video/BV1zE411n7R2/", source: "B站", duration: "系列", tip: "弹力带是最便宜高效的居家力量器材" },
-          { title: "一副哑铃练遍全身的万能攻略", url: "https://www.toutiao.com/article/7493078700183847436/", source: "头条", duration: "图文", tip: "哑铃深蹲/卧推/划船/弯举，动作要点全覆盖" },
+          { title: "一副哑铃练遍全身·家庭哑铃增肌大合集", url: "https://www.douyin.com/video/7239267195774176527", source: "抖音", duration: "27分钟", tip: "卓叔增重出品，247万点赞，哑铃深蹲/卧推/划船/弯举全覆盖" },
         ]
       }
     ],
