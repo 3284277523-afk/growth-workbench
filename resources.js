@@ -64,11 +64,11 @@ const MODULE_RESOURCES = {
         label: "视觉感知",
         unlockDays: 3,
         resources: [
-          { title: "【4K】《像艺术家一样思考》：用右脑绘画（完整版117分钟）", url: "https://www.bilibili.com/video/BV1Bu411Z7eQ/", source: "B站", duration: "117分钟", tip: "8.8万播放/1.1万收藏🔥 贝蒂·艾德华经典教程：倒置临摹+盲画轮廓+阴形观察+显像板全套" },
-          { title: "倒置临摹练习：把参考图倒过来画，屏蔽左脑符号化思维", url: "https://zhuanlan.zhihu.com/p/448598323", source: "知乎", duration: "图文", tip: "一次完整实践记录，选一张看不出是什么的图倒着临摹，启动右脑" },
-          { title: "盲画轮廓练习（Blind Contour）：不看纸只看对象，训练真实边缘感知", url: "https://zhuanlan.zhihu.com/p/77942605", source: "知乎", duration: "图文", tip: "纯轮廓绘画方法详解：一笔画且不看纸，捕捉真实线条而非符号" },
-          { title: "阴形（负空间）观察训练：画物体之间的空隙而非物体本身", url: "https://www.douban.com/note/692029798/", source: "豆瓣", duration: "图文", tip: "5个快速提升绘画水平的练习，核心是画空隙不画物体，颠覆认知" },
-          { title: "显像板（取景框）使用法：将3D世界准确转化到2D平面", url: "https://book.douban.com/review/13470666/", source: "豆瓣", duration: "图文", tip: "DIY取景框步骤+五天实践全记录，等比例复制从此不难" },
+          { title: "【4K】《像艺术家一样思考》：用右脑绘画（完整版117分钟）", url: "https://www.bilibili.com/video/BV1Bu411Z7eQ/", source: "B站", duration: "117分钟", tip: "8.8万播放/1.1万收藏🔥 贝蒂·艾德华官方教程：倒置临摹+盲画+阴形+显像板全套，必看" },
+          { title: "倒置临摹实战：把画颠倒过来向右脑模式切换", url: "https://www.douyin.com/video/7478629764752887077", source: "抖音", duration: "5分钟", tip: "颠覆传统的绘画训练，强制升级观察模式，每笔先看清再落笔" },
+          { title: "盲画轮廓练习：不看纸就画，眼睛看到的手移动和绘制", url: "https://www.douyin.com/video/7619922854163361019", source: "抖音", duration: "3分钟", tip: "眼手绳的基本练习，专注真实边缘线捕捉而非符号化输出" },
+          { title: "0成本在家画！大小朋友都能试的盲画练习", url: "https://www.douyin.com/video/7650804878713733545", source: "抖音", duration: "4分钟", tip: "2026年6月新作，超适合入门者的盲画跟练，什么笔什么纸都行" },
+          { title: "阴形/负空间观察训练：隐藏在空白中的艺术", url: "https://www.douyin.com/video/7487579505930915122", source: "抖音", duration: "4分钟", tip: "解锁绘画负空间，画空隙不画物体，开启全新观察视角" },
         ]
       },
       {
@@ -134,44 +134,58 @@ const MODULE_RESOURCES = {
     ]
   },
 
-  // ======================== 单词 ========================
+  // ======================== 单词/英语 ========================
   vocabulary: {
-    name: "单词",
+    name: "英语",
     icon: "📖",
     stages: [
       {
-        id: "memory",
-        label: "记忆方法",
+        id: "word-root",
+        label: "词根词缀",
         unlockDays: 0,
         resources: [
-          { title: "词根词缀背单词（英语学习第二期·睡前整理）", url: "https://www.bilibili.com/video/BV19N3q69EWD/", source: "B站", duration: "系列", tip: "2026年最新，7个词实战+8个方法背单词，一天一个词根" },
-          { title: "15位B站英语UP主推荐（含单词记忆方向）", url: "https://zhuanlan.zhihu.com/p/581244412", source: "知乎", duration: "图文", tip: "涵盖语法/单词/阅读/听力，精选优质教学UP主" },
-          { title: "词根词缀200讲（Bobo背单词）", url: "https://www.bilibili.com/cheese/play/ss63055", source: "B站课堂", duration: "200课时", tip: "全网30万粉丝UP主，200个词根词缀来源+衍生+例句" },
+          { title: "⭐ 上集：词根词缀轻松记住8000词（全158集+PDF）", url: "https://www.bilibili.com/video/BV1PH7WzME9A/", source: "B站", duration: "158集", tip: "从act/arm/air基础词根开始，1个词根串起N个词，每天3-5集稳步推进" },
+          { title: "⭐ 下集：轻松记住8000词·思维导图速记（全150集+PDF）", url: "https://www.bilibili.com/video/BV172TTzSETm/", source: "B站", duration: "150集", tip: "8.8万播放/6114收藏🔥 词根词缀思维导图进阶，上下合计300+集覆盖8000词" },
         ]
       },
       {
-        id: "context",
-        label: "语境例句",
-        unlockDays: 14,
-        resources: [
-          { title: "词根词缀背单词（语境实战篇）", url: "https://www.bilibili.com/video/BV19N3q69EWD/", source: "B站", duration: "系列", tip: "每个词根配3个真实语境例句，学完就能用" },
-          { title: "15位B站英语UP主（含阅读听力语境学习）", url: "https://zhuanlan.zhihu.com/p/581244412", source: "知乎", duration: "图文", tip: "在真实语境中积累词汇量" },
-        ]
-      },
-      {
-        id: "daily",
-        label: "每日积累",
+        id: "listening",
+        label: "听力输入",
         unlockDays: 30,
         resources: [
-          { title: "词根词缀背单词系列（持续更新）", url: "https://www.bilibili.com/video/BV19N3q69EWD/", source: "B站", duration: "系列", tip: "每天跟学一个词根，长期积累成为万词王" },
-          { title: "600个词根词源精讲课（芳芳老师）", url: "https://www.bilibili.com/cheese/play/ss63831", source: "B站课堂", duration: "600课时", tip: "构建词汇网络，全面提升听说读写能力" },
-          { title: "200个一定要学的英文词根词缀（视频带背）", url: "https://www.bilibili.com/cheese/play/ep292667", source: "B站课堂", duration: "200课时", tip: "100个常用词根+50前缀+50后缀，精选" },
+          { title: "【每天1小时】沉浸式英语听力练习｜日常英文", url: "https://www.bilibili.com/video/BV1AwpYz6Em7/", source: "B站", duration: "42集", tip: "4万播放/1541收藏🔥 每天1小时沉浸听，听懂日常对话不再是梦" },
+          { title: "保姆级听力训练｜零基础也能跟上｜日常对话完整收录", url: "https://www.bilibili.com/video/BV1NCjEz9EsF/", source: "B站", duration: "1集·长片", tip: "3.8万播放/1734收藏，情境式对话+中文配音辅助，零基础友好" },
+        ]
+      },
+      {
+        id: "speaking",
+        label: "口语输出",
+        unlockDays: 60,
+        resources: [
+          { title: "【220集】影子跟读·英语口语听力绝佳资源", url: "https://www.bilibili.com/video/BV1nq4y1G7FH/", source: "B站", duration: "200集", tip: "47万播放/3.4万收藏🔥🔥 每天10分钟影子跟读，模仿native speaker语音语调语速" },
+          { title: "【Easy English】油管千万播放·日常英语口语练习素材（48集）", url: "https://www.bilibili.com/video/BV1Q3gY6gEgo/", source: "B站", duration: "48集", tip: "YouTube原版搬运，真实场景对话：购物/点餐/问路/闲聊全覆盖" },
+        ]
+      },
+      {
+        id: "grammar",
+        label: "语法框架",
+        unlockDays: 90,
+        resources: [
+          { title: "英语语法精讲合集（全面·通俗·有趣 | 从零打造系统语法体系）", url: "https://www.bilibili.com/video/BV1XY411J7aG/", source: "B站", duration: "29集", tip: "4449万播放/271万收藏🏆 英语兔出品，B站语法课天花板，不确定要不要学就先收藏" },
+        ]
+      },
+      {
+        id: "immersion",
+        label: "长期环境",
+        unlockDays: 120,
+        resources: [
+          { title: "【沉浸式英语播客·进阶篇】50篇｜刻意练习英语听力", url: "https://www.bilibili.com/video/BV1R86UBtENR/", source: "B站", duration: "50集", tip: "6156播放/159收藏，进阶听力素材，从'听懂'到'听熟'的跨越" },
         ]
       }
     ],
     showProgress: true,
     progressLabel: "累计单词量",
-    progressTarget: 5000
+    progressTarget: 8000
   },
 
   // ======================== 唱歌 ========================
