@@ -118,13 +118,15 @@ const App = (() => {
       ctx.fillRect(x, y, barW, barH);
     });
 
-    // X轴标签
+    // X轴标签（只显示5个，避免挤在一起）
     ctx.fillStyle = '#8a8a8a';
     ctx.font = '10px -apple-system, sans-serif';
     ctx.textAlign = 'center';
-    const step = Math.ceil(labels.length / 10);
+    const labelStep = Math.ceil(labels.length / 5);
     labels.forEach((l, i) => {
-      if (i % step === 0) ctx.fillText(l, pad.left + gap * i + gap / 2, H - pad.bottom + 15);
+      if (i % labelStep === 0 || i === labels.length - 1) {
+        ctx.fillText(l, pad.left + gap * i + gap / 2, H - pad.bottom + 15);
+      }
     });
   }
 
@@ -218,6 +220,42 @@ const App = (() => {
     toast('📥 周计划已导出为 CSV');
   }
 
+  // ---------- 阶段解锁逻辑 ----------
+  function getStageStatus(module) {
+    const res = MODULE_RESOURCES[module];
+    const stats = getStats(module);
+    const totalDays = stats.totalCount; // 用打卡次数作为"天数"
+    let currentStageIdx = 0;
+    let unlockedStages = [];
+    let lockedStages = [];
+
+    res.stages.forEach((stage, idx) => {
+      const unlockAt = stage.unlockDays || 0;
+      if (totalDays >= unlockAt) {
+        unlockedStages.push(idx);
+        currentStageIdx = idx;
+      } else {
+        lockedStages.push(idx);
+      }
+    });
+
+    return { currentStageIdx, unlockedStages, lockedStages, totalDays };
+  }
+
+  // ---------- 每日轮换推送 ----------
+  function getDailyPick(module) {
+    const res = MODULE_RESOURCES[module];
+    const stats = getStageStatus(module);
+    const currentStage = res.stages[stats.currentStageIdx];
+    if (!currentStage || !currentStage.resources.length) return null;
+
+    // 用日期做种子，每天轮换一条
+    const today = formatDate(new Date());
+    const seed = today.split('-').join('');
+    const idx = parseInt(seed) % currentStage.resources.length;
+    return { stage: currentStage, resource: currentStage.resources[idx], stageIdx: stats.currentStageIdx };
+  }
+
   // ---------- 渲染模块 ----------
   function renderModule(module) {
     currentModule = module;
@@ -249,14 +287,40 @@ const App = (() => {
     // 趋势图
     html += '<div class="panel"><div class="panel-header"><h3>📊 近30天学习时长趋势</h3></div><div class="panel-body"><div class="chart-wrapper"><canvas id="trend-chart"></canvas></div></div></div>';
 
-    // 内容推送
-    html += '<div class="panel"><div class="panel-header"><h3>📚 系统化学习资源推送</h3><span class="text-muted" style="font-size:0.72rem">按进阶路径排序</span></div><div class="panel-body">';
-    res.stages.forEach(stage => {
-      html += '<div class="stage-section"><div class="stage-header"><span class="stage-badge">' + stage.label + '</span><h4>阶段 ' + (res.stages.indexOf(stage) + 1) + ' / ' + res.stages.length + '</h4></div><div class="resource-list">';
-      stage.resources.forEach(r => {
-        html += '<div class="resource-item"><a href="' + r.url + '" target="_blank" rel="noopener">' + r.title + '</a><div class="resource-meta"><span>' + r.source + '</span><span>' + r.duration + '</span></div><div class="resource-tip">💡 ' + r.tip + '</div></div>';
-      });
-      html += '</div></div>';
+    // 今日推荐（每日轮换）
+    const dailyPick = getDailyPick(module);
+    if (dailyPick) {
+      html += '<div class="panel"><div class="panel-header"><h3>⭐ 今日推荐</h3><span class="text-muted" style="font-size:0.72rem">每日轮换 · ' + formatDate(new Date()) + '</span></div><div class="panel-body"><div class="daily-pick"><div class="daily-pick-stage">' + dailyPick.stage.label + ' 阶段</div><div class="resource-item" style="border-color:var(--text-primary);background:var(--bg-secondary);"><a href="' + dailyPick.resource.url + '" target="_blank" rel="noopener">' + dailyPick.resource.title + '</a><div class="resource-meta"><span>' + dailyPick.resource.source + '</span><span>' + dailyPick.resource.duration + '</span></div><div class="resource-tip">💡 ' + dailyPick.resource.tip + '</div></div></div></div></div>';
+    }
+
+    // 内容推送（阶段解锁）
+    const stageStatus = getStageStatus(module);
+    html += '<div class="panel"><div class="panel-header"><h3>📚 系统化学习资源</h3><span class="text-muted" style="font-size:0.72rem">已打卡 ' + stageStatus.totalDays + ' 次 · 当前第 ' + (stageStatus.currentStageIdx + 1) + ' 阶段</span></div><div class="panel-body">';
+
+    // 阶段进度条
+    html += '<div class="stage-progress-section"><div class="stage-progress-bar">';
+    res.stages.forEach((stage, idx) => {
+      const isUnlocked = stageStatus.unlockedStages.includes(idx);
+      const isCurrent = idx === stageStatus.currentStageIdx;
+      const pct = Math.min(100, (stageStatus.totalDays / Math.max(1, stage.unlockDays || 1)) * 100);
+      html += '<div class="stage-progress-item' + (isUnlocked ? ' unlocked' : '') + (isCurrent ? ' current' : '') + '" title="' + stage.label + (isUnlocked ? ' ✓' : ' 🔒 打卡' + (stage.unlockDays || 0) + '次解锁') + '"><span class="stage-progress-label">' + stage.label + '</span>' + (isUnlocked ? '<span class="stage-progress-check">✓</span>' : '<span class="stage-progress-lock">🔒</span>') + '</div>';
+    });
+    html += '</div></div>';
+
+    res.stages.forEach((stage, idx) => {
+      const isUnlocked = stageStatus.unlockedStages.includes(idx);
+      const isCurrent = idx === stageStatus.currentStageIdx;
+      const unlockAt = stage.unlockDays || 0;
+
+      if (isUnlocked) {
+        html += '<div class="stage-section' + (isCurrent ? ' stage-current' : '') + '"><div class="stage-header"><span class="stage-badge">' + stage.label + '</span><h4>阶段 ' + (idx + 1) + ' / ' + res.stages.length + (isCurrent ? ' · 当前' : ' ✓ 已完成') + '</h4></div><div class="resource-list">';
+        stage.resources.forEach(r => {
+          html += '<div class="resource-item"><a href="' + r.url + '" target="_blank" rel="noopener">' + r.title + '</a><div class="resource-meta"><span>' + r.source + '</span><span>' + r.duration + '</span></div><div class="resource-tip">💡 ' + r.tip + '</div></div>';
+        });
+        html += '</div></div>';
+      } else {
+        html += '<div class="stage-section stage-locked"><div class="stage-header"><span class="stage-badge stage-badge-locked">' + stage.label + '</span><h4>阶段 ' + (idx + 1) + ' / ' + res.stages.length + ' · 🔒 打卡 ' + unlockAt + ' 次解锁（还差 ' + (unlockAt - stageStatus.totalDays) + ' 次）</h4></div><div class="stage-locked-hint"><p>继续打卡 ' + (unlockAt - stageStatus.totalDays) + ' 次即可解锁此阶段内容</p></div></div>';
+      }
     });
     html += '</div></div>';
 

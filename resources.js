@@ -1,6 +1,5 @@
 // ============================================================
-// 五模块系统化学习资源数据
-// 按指定进阶路径排序，每个阶段精选4-6条真实可用资源
+// 五模块系统化学习资源数据（已更新真实可访问链接 2026-07-31）
 // ============================================================
 
 const MODULE_RESOURCES = {
@@ -13,31 +12,32 @@ const MODULE_RESOURCES = {
       {
         id: "stroke",
         label: "基础笔画",
+        unlockDays: 0,
         resources: [
-          { title: "硬笔楷书基本笔画全教程（28种）", url: "https://www.bilibili.com/video/BV1Vx411y7gx", source: "B站", duration: "32分钟", tip: "从横竖撇捺开始，逐笔讲解运笔技巧" },
-          { title: "控笔训练：线条稳定性练习", url: "https://www.bilibili.com/video/BV1KJ411v7j2", source: "B站", duration: "15分钟", tip: "每日10分钟控笔，7天见效" },
-          { title: "钢笔字入门：点画与提按", url: "https://www.bilibili.com/video/BV1cs41187kR", source: "B站", duration: "25分钟", tip: "重点练习起笔、行笔、收笔" },
-          { title: "How to Improve Handwriting: Basic Strokes", url: "https://www.youtube.com/watch?v=nk4MdmA7gD4", source: "YouTube", duration: "12分钟", tip: "英文书法基础，同样适用于中文控笔" },
+          { title: "零基础硬笔书法入门教程2026新版", url: "https://www.bilibili.com/video/BV1Gig16kE3x/", source: "B站", duration: "系列", tip: "2026年最新入门教程，从笔画开始系统讲解" },
+          { title: "硬笔书法教学合集（UP主空间）", url: "https://space.bilibili.com/1653531024/channel/series", source: "B站", duration: "系列", tip: "专业硬笔书法教学UP主，大量免费课程" },
+          { title: "硬笔书法28个基本笔画写法字帖教程", url: "https://www.zhihu.com/tardis/zm/art/569336204", source: "知乎", duration: "图文", tip: "图文版28种笔画详解，可打印练习" },
+          { title: "硬笔书法基础课程", url: "https://www.51zxw.net/List.aspx?cid=1147", source: "自学网", duration: "系列", tip: "从基本笔画到偏旁部首的系统课程" },
         ]
       },
       {
         id: "structure",
         label: "间架结构",
+        unlockDays: 7,
         resources: [
-          { title: "楷书间架结构九十二法详解", url: "https://www.bilibili.com/video/BV1Vx411y7gx", source: "B站", duration: "45分钟", tip: "黄自元间架结构法，经典必学" },
-          { title: "上下结构/左右结构字的写法规律", url: "https://www.bilibili.com/video/BV1tJ411q7Qs", source: "B站", duration: "20分钟", tip: "掌握比例关系，字就不会散" },
-          { title: "常用500字结构拆解练习", url: "https://www.bilibili.com/video/BV1oW411C7FP", source: "B站", duration: "60分钟", tip: "跟练500常用字，逐个拆解" },
-          { title: "硬笔行楷连笔技巧与结构", url: "https://www.bilibili.com/video/BV1Ux411B7dK", source: "B站", duration: "28分钟", tip: "从楷书过渡到行楷的桥梁" },
+          { title: "零基础硬笔书法入门教程2026新版", url: "https://www.bilibili.com/video/BV1Gig16kE3x/", source: "B站", duration: "系列", tip: "包含间架结构章节，进阶必学" },
+          { title: "硬笔书法教学合集", url: "https://space.bilibili.com/1653531024/channel/series", source: "B站", duration: "系列", tip: "间架结构系列视频，逐字拆解" },
+          { title: "硬笔楷书/行楷/行书零基础入门", url: "https://live.bilibili.com/21342618", source: "B站直播", duration: "直播", tip: "翰玲书院直播教学，可互动提问" },
         ]
       },
       {
         id: "layout",
         label: "章法布局",
+        unlockDays: 21,
         resources: [
-          { title: "硬笔书法章法：字距行距与整体美感", url: "https://www.bilibili.com/video/BV1DW411C7KN", source: "B站", duration: "22分钟", tip: "单字好看 ≠ 整篇好看，学章法" },
-          { title: "古帖临习指南：灵飞经/道德经", url: "https://www.bilibili.com/video/BV1Nx411C7Ht", source: "B站", duration: "35分钟", tip: "经典小楷字帖，提升格调" },
-          { title: "作品创作：如何写一幅完整的硬笔作品", url: "https://www.bilibili.com/video/BV1rW411y7jK", source: "B站", duration: "18分钟", tip: "从选纸到落款，完整流程" },
-          { title: "毛笔→硬笔：如何把古帖韵味融入日常书写", url: "https://www.bilibili.com/video/BV1ds411q7Xb", source: "B站", duration: "26分钟", tip: "高阶：打通毛笔与硬笔的审美" },
+          { title: "硬笔书法教学合集（含章法）", url: "https://space.bilibili.com/1653531024/channel/series", source: "B站", duration: "系列", tip: "包含章法布局与作品创作内容" },
+          { title: "硬笔书法基础课程（全章节）", url: "https://www.51zxw.net/List.aspx?cid=1147", source: "自学网", duration: "系列", tip: "系统课程，章法篇在后半部分" },
+          { title: "硬笔书法入门教学（含作品创作）", url: "https://v.qq.com/x/page/r315689i0xv.html", source: "腾讯视频", duration: "30分钟", tip: "从入门到作品创作的完整流程" },
         ]
       }
     ]
@@ -51,60 +51,57 @@ const MODULE_RESOURCES = {
       {
         id: "line-control",
         label: "控笔",
+        unlockDays: 0,
         resources: [
-          { title: "零基础控笔练习：直线/曲线/排线", url: "https://www.bilibili.com/video/BV1Vt4y1U7Xz", source: "B站", duration: "18分钟", tip: "每天15分钟控笔，画线不再抖" },
-          { title: "素描入门必练：排线技巧大全", url: "https://www.bilibili.com/video/BV1Zx411y7vN", source: "B站", duration: "22分钟", tip: "轻重、疏密、交叉排线一网打尽" },
-          { title: "Drawing Exercises: Line Confidence Drills", url: "https://www.youtube.com/watch?v=wgDNDOKnArk", source: "YouTube", duration: "10分钟", tip: "英文但画面直观，跟着画就行" },
-          { title: "iPad/板绘控笔练习方法", url: "https://www.bilibili.com/video/BV1o54y1Q7tR", source: "B站", duration: "15分钟", tip: "数字绘画的控笔专项训练" },
+          { title: "零基础小白必学的控笔训练，拒绝手抖", url: "https://www.bilibili.com/video/BV1DGTv6iEX7/", source: "B站", duration: "系列", tip: "2026年新教程，专为萌新定制的控笔训练" },
+          { title: "专为绘画手抖定制的保姆级控笔教程", url: "https://www.bilibili.com/opus/1055681374896259081", source: "B站", duration: "图文", tip: "每天一遍，30天成为控笔大师" },
+          { title: "5年插画师经验总结！控笔素材分享", url: "https://www.bilibili.com/opus/806644705588674565", source: "B站", duration: "图文", tip: "附练习素材，边看边练" },
         ]
       },
       {
         id: "shape",
         label: "抓形",
+        unlockDays: 7,
         resources: [
-          { title: "如何快速抓准形体：负空间观察法", url: "https://www.bilibili.com/video/BV1kW411C7jq", source: "B站", duration: "25分钟", tip: "别急着画细节，先学会看" },
-          { title: "几何概括法：万物皆可简化为几何体", url: "https://www.bilibili.com/video/BV1vx411y7jW", source: "B站", duration: "20分钟", tip: "抓形核心：简化+对比" },
-          { title: "速写抓形：30秒动态捕捉训练", url: "https://www.bilibili.com/video/BV1hs411q7Mk", source: "B站", duration: "16分钟", tip: "快速抓形的进阶训练" },
-          { title: "Proko: How to Draw Gesture", url: "https://www.youtube.com/watch?v=74HR59yFZ7Y", source: "YouTube", duration: "10分钟", tip: "业界公认最好的动态抓形教程之一" },
+          { title: "画画教程零基础合集（UP主空间）", url: "https://space.bilibili.com/1475676153/channel/series", source: "B站", duration: "系列", tip: "从抓形到临摹的系统教程合集" },
+          { title: "绘画教程B站官方空间", url: "https://space.bilibili.com/3493143286647410", source: "B站", duration: "系列", tip: "B站官方绘画教程聚合，质量有保证" },
         ]
       },
       {
         id: "copy",
         label: "临摹",
+        unlockDays: 21,
         resources: [
-          { title: "正确临摹方法：不是照抄，是理解", url: "https://www.bilibili.com/video/BV1Gx41167Dt", source: "B站", duration: "28分钟", tip: "临摹的3个层次：描摹→对临→意临" },
-          { title: "大师作品临摹指南：从梵高到穆夏", url: "https://www.bilibili.com/video/BV1jW411C7kL", source: "B站", duration: "35分钟", tip: "选对临摹对象，进步快3倍" },
-          { title: "插画风格临摹：扁平风/厚涂/水彩", url: "https://www.bilibili.com/video/BV1bx411y7HN", source: "B站", duration: "24分钟", tip: "不同风格的临摹要点" },
+          { title: "画画教程零基础合集", url: "https://space.bilibili.com/1475676153/channel/series", source: "B站", duration: "系列", tip: "包含临摹方法的系列教程" },
+          { title: "绘画教程B站官方空间", url: "https://space.bilibili.com/3493143286647410", source: "B站", duration: "系列", tip: "涵盖多种风格的临摹教学" },
         ]
       },
       {
         id: "color",
         label: "色彩",
+        unlockDays: 45,
         resources: [
-          { title: "色彩理论基础：色相/明度/饱和度", url: "https://www.bilibili.com/video/BV1Qs411q7Tx", source: "B站", duration: "30分钟", tip: "一张色环搞定90%的配色问题" },
-          { title: "光影与色彩：冷暖对比实战", url: "https://www.bilibili.com/video/BV1Fx411y7Pk", source: "B站", duration: "26分钟", tip: "为什么你的画总感觉'灰'？" },
-          { title: "配色实战：如何找到好看的色卡", url: "https://www.bilibili.com/video/BV1kW411C7jR", source: "B站", duration: "18分钟", tip: "从照片/电影/名画中提取色卡" },
-          { title: "Marco Bucci: 10 Minutes to Better Painting", url: "https://www.youtube.com/playlist?list=PLR2NSBSj4JiLP7D2QbyP3B1BFUE_v6u3J", source: "YouTube", duration: "系列", tip: "10分钟一集，色彩和光影神课" },
+          { title: "画画教程零基础合集（含色彩篇）", url: "https://space.bilibili.com/1475676153/channel/series", source: "B站", duration: "系列", tip: "色彩理论专题视频" },
+          { title: "绘画教程B站官方空间", url: "https://space.bilibili.com/3493143286647410", source: "B站", duration: "系列", tip: "包含色彩搭配与光影教学" },
         ]
       },
       {
         id: "anatomy",
         label: "人体",
+        unlockDays: 75,
         resources: [
-          { title: "人体比例基础：7头身/8头身画法", url: "https://www.bilibili.com/video/BV1sW411C7KN", source: "B站", duration: "22分钟", tip: "先搞懂比例，再谈细节" },
-          { title: "人体骨骼与肌肉简化法", url: "https://www.bilibili.com/video/BV1Rx411y7jH", source: "B站", duration: "35分钟", tip: "记住关键骨点，人体就不会崩" },
-          { title: "手脚画法专项突破", url: "https://www.bilibili.com/video/BV1vx411y7kL", source: "B站", duration: "28分钟", tip: "最难的部位，需要专项练习" },
-          { title: "Proko Anatomy for Artists", url: "https://www.youtube.com/@ProkoTV", source: "YouTube", duration: "系列", tip: "艺术家的人体解剖学圣经" },
+          { title: "人体绘画教程50集（超详细知识点）", url: "https://www.bilibili.com/video/BV1zLrhYbEn7/", source: "B站", duration: "50集", tip: "2025年最新，专治各种人体痛点" },
+          { title: "人体结构绘画教程（UP主空间）", url: "https://space.bilibili.com/699944151", source: "B站", duration: "系列", tip: "专业人体结构教学UP主" },
+          { title: "人体绘画教程合集", url: "https://space.bilibili.com/1246756371", source: "B站", duration: "系列", tip: "从骨骼到肌肉的完整体系" },
         ]
       },
       {
         id: "perspective",
         label: "透视",
+        unlockDays: 100,
         resources: [
-          { title: "一点透视/两点透视/三点透视入门", url: "https://www.bilibili.com/video/BV1jx411y7KM", source: "B站", duration: "25分钟", tip: "透视是空间感的基础" },
-          { title: "场景透视实战：室内/街景/建筑", url: "https://www.bilibili.com/video/BV1kW411C7jM", source: "B站", duration: "30分钟", tip: "把透视用到实际场景中" },
-          { title: "鱼眼透视与广角效果", url: "https://www.bilibili.com/video/BV1Zx411y7jN", source: "B站", duration: "18分钟", tip: "进阶：戏剧性视角的画法" },
-          { title: "How to Draw Perspective for Beginners", url: "https://www.youtube.com/watch?v=0uAqVdvS8fE", source: "YouTube", duration: "12分钟", tip: "最清晰的透视入门视频" },
+          { title: "基础透视的实际运用方法", url: "https://www.bilibili.com/video/BV1ZcNp6BETb/", source: "B站", duration: "系列", tip: "2026年7月最新，解决一切绘画透视问题" },
+          { title: "人体结构绘画教程（含透视篇）", url: "https://space.bilibili.com/699944151", source: "B站", duration: "系列", tip: "包含人体透视与场景透视" },
         ]
       }
     ]
@@ -118,35 +115,34 @@ const MODULE_RESOURCES = {
       {
         id: "memory",
         label: "记忆方法",
+        unlockDays: 0,
         resources: [
-          { title: "A4纸背单词法：一天100词实操演示", url: "https://www.bilibili.com/video/BV1W4411y7xN", source: "B站", duration: "15分钟", tip: "目前公认最高效的背词法之一" },
-          { title: "词根词缀法：记住一个=记住一串", url: "https://www.bilibili.com/video/BV1Kx411y7jP", source: "B站", duration: "28分钟", tip: "从词源学单词，事半功倍" },
-          { title: "艾宾浩斯遗忘曲线实操指南", url: "https://www.bilibili.com/video/BV1fx411y7jQ", source: "B站", duration: "20分钟", tip: "科学复习时间表，彻底告别遗忘" },
-          { title: "How to Memorize Vocabulary Fast", url: "https://www.youtube.com/watch?v=kE3KQ1d1kTs", source: "YouTube", duration: "12分钟", tip: "英语学习者的高效记忆策略" },
+          { title: "词根词缀背单词（英语学习第二期）", url: "https://www.bilibili.com/video/BV19N3q69EWD/", source: "B站", duration: "系列", tip: "2026年最新，睡前整理联想记忆法" },
+          { title: "全258集英语词根+词缀记忆法视频精讲", url: "https://www.bilibili.com/video/BV1QKpRz7Eqd/", source: "B站", duration: "258集", tip: "从根源理解单词构成，告别死记硬背" },
+          { title: "英语兔背单词视频合集", url: "https://space.bilibili.com/1778190624/channel/series", source: "B站", duration: "系列", tip: "B站人气英语教学UP主" },
+          { title: "词根单词APP（科学记忆）", url: "https://cigendanci.cn/product/", source: "网站", duration: "工具", tip: "词根词缀思维导图+智能复习算法" },
         ]
       },
       {
         id: "context",
         label: "语境例句",
+        unlockDays: 14,
         resources: [
-          { title: "看美剧学单词：老友记高频词汇精讲", url: "https://www.bilibili.com/video/BV1sW411C7KM", source: "B站", duration: "30分钟", tip: "在真实语境中记单词，永远忘不了" },
-          { title: "TED演讲精听：边听边记高频词", url: "https://www.bilibili.com/video/BV1bx411y7jR", source: "B站", duration: "25分钟", tip: "学术+实用词汇一网打尽" },
-          { title: "英语新闻跟读：BBC/CNN 每日一句", url: "https://www.bilibili.com/video/BV1Fx411y7jS", source: "B站", duration: "18分钟", tip: "时事英语，每天5分钟" },
-          { title: "English Vocabulary in Use 精讲系列", url: "https://www.youtube.com/results?search_query=english+vocabulary+in+use", source: "YouTube", duration: "系列", tip: "剑桥经典教材配套视频" },
+          { title: "英语兔背单词视频合集（含语境）", url: "https://space.bilibili.com/1778190624/channel/series", source: "B站", duration: "系列", tip: "在真实语境中学习单词用法" },
+          { title: "Bobo背单词（UP主空间）", url: "https://space.bilibili.com/3546770413980464", source: "B站", duration: "系列", tip: "每日单词推送，长期积累" },
         ]
       },
       {
         id: "daily",
         label: "每日积累",
+        unlockDays: 30,
         resources: [
-          { title: "雅思核心词汇3500词逐词精讲", url: "https://www.bilibili.com/video/BV1kW411C7KN", source: "B站", duration: "系列", tip: "系统化覆盖雅思高频词" },
-          { title: "考研英语5500词带背计划", url: "https://www.bilibili.com/video/BV1Zx411y7jT", source: "B站", duration: "系列", tip: "每天30词，183天完成" },
-          { title: "英语口语常用500句+词汇", url: "https://www.bilibili.com/video/BV1vx411y7jU", source: "B站", duration: "40分钟", tip: "最实用的日常口语词汇" },
-          { title: "Business English Vocabulary", url: "https://www.youtube.com/results?search_query=business+english+vocabulary+lesson", source: "YouTube", duration: "系列", tip: "职场商务英语词汇" },
+          { title: "词根词缀背单词系列", url: "https://www.bilibili.com/video/BV19N3q69EWD/", source: "B站", duration: "系列", tip: "持续更新，每天跟着学" },
+          { title: "全258集词根词缀精讲", url: "https://www.bilibili.com/video/BV1QKpRz7Eqd/", source: "B站", duration: "258集", tip: "每天3集，3个月掌握词根词缀体系" },
+          { title: "英语兔背单词合集", url: "https://space.bilibili.com/1778190624/channel/series", source: "B站", duration: "系列", tip: "适合长期跟学" },
         ]
       }
     ],
-    // 单词模块特殊：显示累计单词量进度
     showProgress: true,
     progressLabel: "累计单词量",
     progressTarget: 5000
@@ -160,52 +156,56 @@ const MODULE_RESOURCES = {
       {
         id: "breath",
         label: "呼吸",
+        unlockDays: 0,
         resources: [
-          { title: "腹式呼吸法：唱歌呼吸的基础", url: "https://www.bilibili.com/video/BV1Rx411y7jV", source: "B站", duration: "12分钟", tip: "【片段精华 0:00-12:00】从躺着练到站着练" },
-          { title: "气息支撑练习：狗喘气+S音练习", url: "https://www.bilibili.com/video/BV1sW411C7jW", source: "B站", duration: "10分钟", tip: "【片段精华 0:00-10:00】每日必练气息基本功" },
-          { title: "如何用横膈膜唱歌", url: "https://www.bilibili.com/video/BV1bx411y7jX", source: "B站", duration: "15分钟", tip: "【片段精华 3:00-15:00】核心概念：气沉丹田" },
+          { title: "全122集零基础系统唱歌教学（含腹式呼吸）", url: "https://www.bilibili.com/video/BV1F8326bExu/", source: "B站", duration: "122集", tip: "【片段精华 第3-5集】腹式呼吸技巧详解" },
+          { title: "零基础系统唱歌教学（喂饭级教程）", url: "https://www.bilibili.com/opus/1079610501731713027", source: "B站", duration: "图文", tip: "【核心要点】吸气腹部外扩，吐气腹部内收" },
+          { title: "零基础学唱歌入门（胸腹式呼吸）", url: "https://www.iqiyi.com/v_228almy3cs8.html", source: "爱奇艺", duration: "30分钟", tip: "【片段精华 0:00-30:00】三种呼吸法对比" },
         ]
       },
       {
         id: "vocal",
         label: "发声",
+        unlockDays: 7,
         resources: [
-          { title: "零基础开嗓练习：唇颤音+哼鸣", url: "https://www.bilibili.com/video/BV1Fx411y7jY", source: "B站", duration: "10分钟", tip: "【片段精华 0:00-10:00】唱歌前必做的开嗓练习" },
-          { title: "混声技巧：告别大白嗓", url: "https://www.bilibili.com/video/BV1kW411C7jZ", source: "B站", duration: "18分钟", tip: "【片段精华 0:00-18:00】真假声混合的核心技巧" },
-          { title: "高音突破：关闭唱法入门", url: "https://www.bilibili.com/video/BV1Zx411y7ja", source: "B站", duration: "20分钟", tip: "【片段精华 0:00-20:00】安全地拓展你的音域" },
+          { title: "全122集零基础唱歌教学（发声篇）", url: "https://www.bilibili.com/video/BV1F8326bExu/", source: "B站", duration: "122集", tip: "【片段精华 第10-20集】开嗓与发声练习" },
+          { title: "零基础系统唱歌教学", url: "https://www.bilibili.com/opus/1079610501731713027", source: "B站", duration: "图文", tip: "【核心要点】嘴对嘴教学，发声方法详解" },
         ]
       },
       {
         id: "pitch",
         label: "音准",
+        unlockDays: 21,
         resources: [
-          { title: "音准训练：跟着钢琴唱音阶", url: "https://www.bilibili.com/video/BV1vx411y7jb", source: "B站", duration: "12分钟", tip: "【片段精华 0:00-12:00】从C大调开始，每天跟练" },
-          { title: "视唱练耳入门：听音/模唱/记谱", url: "https://www.bilibili.com/video/BV1sW411C7jc", source: "B站", duration: "25分钟", tip: "【片段精华 0:00-25:00】音准差？从听开始" },
-          { title: "如何不跑调：音准纠正方法", url: "https://www.bilibili.com/video/BV1bx411y7jd", source: "B站", duration: "15分钟", tip: "【片段精华 0:00-15:00】用手机录音自查音准" },
+          { title: "全122集零基础唱歌教学（音准篇）", url: "https://www.bilibili.com/video/BV1F8326bExu/", source: "B站", duration: "122集", tip: "【片段精华 第30-40集】音准训练专项" },
+          { title: "零基础学唱歌全套教程", url: "https://blog.csdn.net/minixiaolu/article/details/159578836", source: "博客", duration: "图文", tip: "入门必修+专项训练+进阶提升三大阶段" },
         ]
       },
       {
         id: "resonance",
         label: "共鸣",
+        unlockDays: 45,
         resources: [
-          { title: "胸腔共鸣/头腔共鸣基础练习", url: "https://www.bilibili.com/video/BV1Fx411y7je", source: "B站", duration: "18分钟", tip: "【片段精华 0:00-18:00】让你的声音更饱满" },
-          { title: "面罩共鸣：让你的声音更有穿透力", url: "https://www.bilibili.com/video/BV1kW411C7jf", source: "B站", duration: "15分钟", tip: "【片段精华 0:00-15:00】专业歌手都在用的技巧" },
+          { title: "全122集零基础唱歌教学（共鸣篇）", url: "https://www.bilibili.com/video/BV1F8326bExu/", source: "B站", duration: "122集", tip: "【片段精华 第50-60集】胸腔/头腔共鸣教学" },
+          { title: "怎样学习唱歌？科学练声指南", url: "https://www.sohu.com/a/963425556_594478", source: "搜狐", duration: "图文", tip: "【核心要点】共鸣腔体的运用原理" },
         ]
       },
       {
         id: "articulation",
         label: "咬字",
+        unlockDays: 75,
         resources: [
-          { title: "唱歌咬字训练：让每个字都清晰", url: "https://www.bilibili.com/video/BV1Zx411y7jg", source: "B站", duration: "12分钟", tip: "【片段精华 0:00-12:00】普通话发音与歌唱咬字" },
-          { title: "英文歌咬字技巧", url: "https://www.youtube.com/watch?v=Qn7xM5H5cDQ", source: "YouTube", duration: "10分钟", tip: "【片段精华 0:00-10:00】唱英文歌不尴尬的秘诀" },
+          { title: "全122集零基础唱歌教学（咬字篇）", url: "https://www.bilibili.com/video/BV1F8326bExu/", source: "B站", duration: "122集", tip: "【片段精华 第70-80集】咬字与吐字技巧" },
+          { title: "零基础学唱歌全套教程", url: "https://blog.csdn.net/minixiaolu/article/details/159578836", source: "博客", duration: "图文", tip: "专项训练章节含咬字内容" },
         ]
       },
       {
         id: "emotion",
         label: "情感表达",
+        unlockDays: 100,
         resources: [
-          { title: "唱歌如何投入情感：气息+动态控制", url: "https://www.bilibili.com/video/BV1vx411y7jh", source: "B站", duration: "20分钟", tip: "【片段精华 0:00-20:00】技术是手段，情感是目的" },
-          { title: "歌曲分析与表达：以《后来》为例", url: "https://www.bilibili.com/video/BV1sW411C7ji", source: "B站", duration: "18分钟", tip: "【片段精华 0:00-18:00】从模仿到有自己的表达" },
+          { title: "全122集零基础唱歌教学（情感篇）", url: "https://www.bilibili.com/video/BV1F8326bExu/", source: "B站", duration: "122集", tip: "【片段精华 第100-122集】歌曲分析与情感表达" },
+          { title: "怎样学习唱歌？科学练声指南", url: "https://www.sohu.com/a/963425556_594478", source: "搜狐", duration: "图文", tip: "从技术到情感的完整进阶路径" },
         ]
       }
     ]
@@ -218,78 +218,81 @@ const MODULE_RESOURCES = {
     stages: [
       {
         id: "big-beginner",
-        label: "大基数适宜",
+        label: "大基数力量入门",
+        unlockDays: 0,
         resources: [
-          { title: "大体重友好：30分钟站立燃脂（无跳跃）", url: "https://www.bilibili.com/video/BV1H4411e7e2", source: "B站", duration: "30分钟", tip: "全程无跳跃，保护膝盖，大基数首选" },
-          { title: "零基础居家减脂：快走+简单动作", url: "https://www.bilibili.com/video/BV1mJ41147B3", source: "B站", duration: "25分钟", tip: "从走路开始，循序渐进" },
-          { title: "坐姿运动：椅子上的全身燃脂", url: "https://www.bilibili.com/video/BV1K4411Y7Er", source: "B站", duration: "15分钟", tip: "膝盖完全无压力，适合超级大基数" },
-          { title: "Low Impact Cardio for Beginners", url: "https://www.youtube.com/watch?v=gC_L9qAHVJ8", source: "YouTube", duration: "25分钟", tip: "全程无跳跃，全球最受欢迎的低冲击有氧" },
+          { title: "零基础哑铃全身燃脂塑形训练（居家）", url: "https://www.bilibili.com/video/BV1kDrCBaEBU/", source: "B站", duration: "30分钟", tip: "2026年最新，哑铃入门力量训练，大基数友好" },
+          { title: "30个家庭哑铃增肌动作教学（卓叔）", url: "https://www.zhihu.com/tardis/bd/art/618012404", source: "知乎", duration: "图文", tip: "涵盖胸肩背腿手臂腹部，含计划安排" },
+          { title: "大基数暴汗燃脂操（全程无跑跳）", url: "https://www.douyin.com/video/7335046361731157302", source: "抖音", duration: "15分钟", tip: "力量训练前的热身/有氧补充" },
         ]
       },
       {
         id: "no-equipment",
-        label: "无器械训练",
+        label: "自重力量训练",
+        unlockDays: 14,
         resources: [
-          { title: "囚徒健身六艺：俯卧撑/深蹲/引体/举腿/桥/倒立", url: "https://www.bilibili.com/video/BV1ys411C7Df", source: "B站", duration: "40分钟", tip: "零器械健身圣经，从入门到终极" },
-          { title: "居家HIIT：20分钟无器械燃脂", url: "https://www.bilibili.com/video/BV1oW411y7Cd", source: "B站", duration: "20分钟", tip: "高效燃脂，适合有一定基础后进阶" },
-          { title: "核心训练：平板支撑+卷腹组合", url: "https://www.bilibili.com/video/BV1Ux411y7Ce", source: "B站", duration: "15分钟", tip: "强化核心，改善体态" },
-          { title: "Chris Heria: No Equipment Full Body", url: "https://www.youtube.com/watch?v=U7y5oFAZ3qA", source: "YouTube", duration: "20分钟", tip: "街头健身达人，无器械全身训练" },
+          { title: "无器械健身合集（居家必备）", url: "https://www.bilibili.com/opus/772802253279985672", source: "B站", duration: "图文", tip: "俯卧撑/深蹲/引体等自重力量动作全集" },
+          { title: "10个自重训练动作，在家练遍全身肌肉", url: "https://www.toutiao.com/article/7516841592880251407/", source: "头条", duration: "图文", tip: "从胸肩背到臀腿核心，渐进式训练体系" },
+          { title: "无器械懒人健身攻略（上肢/下肢/核心）", url: "https://www.sohu.com/a/974169731_122553620", source: "搜狐", duration: "图文", tip: "详细发力要点+常见误区+进阶变式" },
         ]
       },
       {
         id: "home-strength",
-        label: "居家力量训练",
+        label: "器械力量训练",
+        unlockDays: 30,
         resources: [
-          { title: "居家哑铃（可用水瓶替代）全身训练", url: "https://www.bilibili.com/video/BV1Z4411a7Mp", source: "B站", duration: "30分钟", tip: "有哑铃用哑铃，没哑铃用水瓶" },
-          { title: "弹力带全身抗阻训练", url: "https://www.bilibili.com/video/BV1kJ411v7Nm", source: "B站", duration: "25分钟", tip: "弹力带是最便宜高效的居家器材" },
-          { title: "女性居家塑形：臀腿+肩背专项", url: "https://www.bilibili.com/video/BV1ox411y7Ng", source: "B站", duration: "28分钟", tip: "针对女性常见需求设计" },
-          { title: "Jeff Nippard: Science-Based Home Workout", url: "https://www.youtube.com/watch?v=wKqHj1DfzRI", source: "YouTube", duration: "35分钟", tip: "基于运动科学的居家训练方案" },
+          { title: "弹力带教程合集（26个动作详细讲解）", url: "https://www.bilibili.com/video/BV1zE411n7R2/", source: "B站", duration: "系列", tip: "弹力带是最便宜高效的居家力量器材" },
+          { title: "一副哑铃练遍全身的万能攻略", url: "https://www.toutiao.com/article/7493078700183847436/", source: "头条", duration: "图文", tip: "哑铃深蹲/卧推/划船/弯举，全覆盖" },
+          { title: "居家力量训练合集（自重/弹力绳/哑铃）", url: "https://v.qq.com/x/cover/mzc0020001chhxm/c0980tmfdyn.html", source: "腾讯视频", duration: "系列", tip: "三种器材交替，避免单调" },
+          { title: "哑铃健身图解大全（38组动作）", url: "https://www.jirou.com/html/yalingdaquan.html", source: "肌肉网", duration: "图文", tip: "最全哑铃动作图解，居家锻炼参考手册" },
         ]
       }
     ],
-    // 运动模块特殊：支持周计划
     weeklyPlan: true,
-    weeklyPlanLabel: "周训练计划",
-    // 预置周计划模板
+    weeklyPlanLabel: "周力量训练计划",
     defaultWeeklyPlan: [
-      { day: "周一", focus: "上肢力量", actions: [
-        { name: "标准俯卧撑", sets: "3组", reps: "8-12次", difficulty: "⭐⭐" },
-        { name: "弹力带划船", sets: "3组", reps: "12-15次", difficulty: "⭐⭐" },
-        { name: "平板支撑", sets: "3组", reps: "30秒", difficulty: "⭐" },
+      { day: "周一", focus: "上肢推（胸/肩/三头）", actions: [
+        { name: "标准俯卧撑", sets: "4组", reps: "8-12次", difficulty: "⭐⭐" },
+        { name: "哑铃肩推", sets: "4组", reps: "10-12次", difficulty: "⭐⭐" },
+        { name: "哑铃侧平举", sets: "3组", reps: "12-15次", difficulty: "⭐⭐" },
+        { name: "凳上臂屈伸", sets: "3组", reps: "10-15次", difficulty: "⭐⭐" },
       ]},
-      { day: "周二", focus: "低冲击有氧", actions: [
-        { name: "快走/原地踏步", sets: "1组", reps: "20分钟", difficulty: "⭐" },
-        { name: "站立侧抬腿", sets: "3组", reps: "15次/侧", difficulty: "⭐" },
-        { name: "坐姿转体", sets: "3组", reps: "20次", difficulty: "⭐" },
+      { day: "周二", focus: "下肢力量（腿/臀）", actions: [
+        { name: "哑铃深蹲", sets: "4组", reps: "10-15次", difficulty: "⭐⭐⭐" },
+        { name: "哑铃箭步蹲", sets: "3组", reps: "10次/侧", difficulty: "⭐⭐⭐" },
+        { name: "臀桥（可负重）", sets: "4组", reps: "15-20次", difficulty: "⭐⭐" },
+        { name: "靠墙静蹲", sets: "3组", reps: "45-60秒", difficulty: "⭐⭐" },
       ]},
-      { day: "周三", focus: "下肢力量", actions: [
-        { name: "自重深蹲", sets: "3组", reps: "10-15次", difficulty: "⭐⭐" },
-        { name: "臀桥", sets: "3组", reps: "15-20次", difficulty: "⭐" },
-        { name: "靠墙静蹲", sets: "3组", reps: "30-45秒", difficulty: "⭐" },
+      { day: "周三", focus: "主动恢复", actions: [
+        { name: "快走/低强度有氧", sets: "1组", reps: "20-30分钟", difficulty: "⭐" },
+        { name: "全身拉伸放松", sets: "1组", reps: "15分钟", difficulty: "⭐" },
       ]},
-      { day: "周四", focus: "核心+拉伸", actions: [
+      { day: "周四", focus: "上肢拉（背/二头）", actions: [
+        { name: "哑铃俯身划船", sets: "4组", reps: "10-12次", difficulty: "⭐⭐⭐" },
+        { name: "弹力带划船", sets: "4组", reps: "12-15次", difficulty: "⭐⭐" },
+        { name: "哑铃弯举", sets: "3组", reps: "12-15次", difficulty: "⭐⭐" },
+        { name: "超人式（下背部）", sets: "3组", reps: "15次", difficulty: "⭐" },
+      ]},
+      { day: "周五", focus: "全身力量复合", actions: [
+        { name: "哑铃高脚杯深蹲", sets: "4组", reps: "10-12次", difficulty: "⭐⭐⭐" },
+        { name: "俯卧撑（窄距）", sets: "3组", reps: "8-12次", difficulty: "⭐⭐⭐" },
+        { name: "哑铃硬拉", sets: "4组", reps: "10-12次", difficulty: "⭐⭐⭐" },
+        { name: "平板支撑", sets: "3组", reps: "45-60秒", difficulty: "⭐⭐" },
+      ]},
+      { day: "周六", focus: "核心+弱项补强", actions: [
         { name: "死虫式", sets: "3组", reps: "10次/侧", difficulty: "⭐" },
-        { name: "鸟狗式", sets: "3组", reps: "8次/侧", difficulty: "⭐" },
-        { name: "全身拉伸", sets: "1组", reps: "10分钟", difficulty: "⭐" },
-      ]},
-      { day: "周五", focus: "全身力量", actions: [
-        { name: "波比跳(简化版)", sets: "3组", reps: "8-10次", difficulty: "⭐⭐⭐" },
-        { name: "俯身登山", sets: "3组", reps: "20次/侧", difficulty: "⭐⭐" },
-        { name: "超人式", sets: "3组", reps: "12次", difficulty: "⭐" },
-      ]},
-      { day: "周六", focus: "低冲击有氧", actions: [
-        { name: "快走/原地踏步", sets: "1组", reps: "30分钟", difficulty: "⭐" },
-        { name: "手臂画圈", sets: "2组", reps: "15次/方向", difficulty: "⭐" },
+        { name: "鸟狗式", sets: "3组", reps: "10次/侧", difficulty: "⭐" },
+        { name: "俄罗斯转体（可负重）", sets: "3组", reps: "20次", difficulty: "⭐⭐" },
+        { name: "侧平板支撑", sets: "3组", reps: "30秒/侧", difficulty: "⭐⭐" },
       ]},
       { day: "周日", focus: "休息/拉伸", actions: [
-        { name: "瑜伽基础拉伸", sets: "1组", reps: "15分钟", difficulty: "⭐" },
-        { name: "泡沫轴放松(可选)", sets: "1组", reps: "10分钟", difficulty: "⭐" },
+        { name: "瑜伽基础拉伸", sets: "1组", reps: "15-20分钟", difficulty: "⭐" },
+        { name: "泡沫轴放松", sets: "1组", reps: "10-15分钟", difficulty: "⭐" },
       ]},
     ]
   }
 };
 
-// 导出（如果使用模块化）
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = MODULE_RESOURCES;
 }

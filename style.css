@@ -384,9 +384,10 @@ body {
   font-size: 0.6rem;
   color: var(--text-muted);
   text-align: center;
-  margin-bottom: 4px;
-  height: 14px;
-  line-height: 14px;
+  margin-bottom: 6px;
+  height: 20px;
+  line-height: 20px;
+  white-space: nowrap;
 }
 
 .heatmap-cell {
@@ -843,3 +844,111 @@ body {
 .mt-24 { margin-top: 24px; }
 .mb-8 { margin-bottom: 8px; }
 .mb-16 { margin-bottom: 16px; }
+
+/* ---------- 每日推荐 ---------- */
+.daily-pick {
+  padding: 4px 0;
+}
+
+.daily-pick-stage {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+/* ---------- 阶段进度条 ---------- */
+.stage-progress-section {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.stage-progress-bar {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.stage-progress-item {
+  flex: 1;
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  transition: all var(--transition);
+}
+
+.stage-progress-item.unlocked {
+  border-color: var(--text-primary);
+  background: var(--bg);
+}
+
+.stage-progress-item.current {
+  background: var(--text-primary);
+}
+
+.stage-progress-item.current .stage-progress-label {
+  color: var(--bg);
+}
+
+.stage-progress-item.current .stage-progress-check {
+  color: var(--bg);
+}
+
+.stage-progress-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.stage-progress-check {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+}
+
+.stage-progress-lock {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ---------- 锁定阶段 ---------- */
+.stage-locked {
+  opacity: 0.5;
+}
+
+.stage-locked .stage-header h4 {
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.stage-badge-locked {
+  background: var(--bg-tertiary) !important;
+  color: var(--text-muted) !important;
+}
+
+.stage-locked-hint {
+  padding: 16px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.stage-locked-hint p {
+  font-style: italic;
+}
+
+/* ---------- 当前阶段高亮 ---------- */
+.stage-current {
+  border-left: 3px solid var(--text-primary);
+  padding-left: 12px;
+  margin-left: -15px;
+}
