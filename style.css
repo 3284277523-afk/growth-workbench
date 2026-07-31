@@ -166,26 +166,31 @@ body {
 
 /* ---------- 顶部每日好句 ---------- */
 .top-bar {
-  height: var(--topbar-height);
-  min-height: var(--topbar-height);
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border);
   display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 0 20px;
-  padding-right: 110px;
-  padding-top: env(safe-area-inset-top, 0px);
-  overflow-x: auto;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 20px;
+  padding-top: calc(8px + env(safe-area-inset-top, 0px));
+  padding-bottom: 8px;
+  min-height: calc(var(--topbar-height) + env(safe-area-inset-top, 0px));
 }
 
 .quote-block {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   white-space: nowrap;
   color: var(--text-secondary);
+  overflow: hidden;
+}
+
+.quote-block span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .quote-label {
@@ -199,6 +204,7 @@ body {
   border-radius: 10px;
   font-size: 0.7rem;
   font-weight: 700;
+  flex-shrink: 0;
 }
 
 .quote-en { font-family: "SF Pro", -apple-system, sans-serif; }
@@ -208,9 +214,8 @@ body {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 16px 20px 32px;
+  padding: 16px 24px 32px 20px;
   max-width: 100%;
-  padding-right: 24px;
 }
 
 /* ---------- 通用面板 ---------- */
@@ -460,7 +465,7 @@ body {
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
+  gap: 4px;
 }
 
 .calendar-weekday {
@@ -558,8 +563,7 @@ textarea {
 /* ---------- 金币栏 ---------- */
 .coin-bar {
   position: fixed;
-  top: 12px;
-  top: calc(12px + env(safe-area-inset-top, 0px));
+  top: calc(52px + env(safe-area-inset-top, 0px));
   right: 16px;
   z-index: 300;
 }
@@ -930,17 +934,25 @@ textarea {
   }
 
   .top-bar {
-    padding: 0 12px;
-    padding-top: env(safe-area-inset-top, 12px);
-    gap: 8px;
-    min-height: calc(var(--topbar-height) + env(safe-area-inset-top, 12px));
+    padding: 6px 12px;
+    padding-top: calc(6px + env(safe-area-inset-top, 0px));
+    gap: 4px;
+    min-height: calc(52px + env(safe-area-inset-top, 0px));
   }
 
   .quote-block {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
   }
 
-  .quote-en { max-width: 45%; }
+  .coin-bar {
+    top: calc(46px + env(safe-area-inset-top, 0px));
+    right: 12px;
+  }
+
+  .coin-bar-inner {
+    padding: 4px 8px;
+    font-size: 0.72rem;
+  }
 
   .sidebar {
     padding: 16px 6px;
