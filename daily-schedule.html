@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日成长日程表</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #ffffff; color: #0a0a0a; line-height: 1.6; padding: 24px; }
+  h1 { font-size: 1.6rem; margin-bottom: 4px; }
+  .subtitle { color: #666; font-size: 0.9rem; margin-bottom: 20px; }
+  .schedule { max-width: 700px; margin: 0 auto; }
+
+  .period { margin-bottom: 32px; }
+  .period-header { font-size: 1.15rem; font-weight: 700; padding: 10px 14px; background: #f5f5f5; border-left: 3px solid #0a0a0a; margin-bottom: 8px; }
+  .period-duration { color: #888; font-size: 0.8rem; font-weight: 400; margin-left: 8px; }
+
+  .time-block { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #eee; align-items: flex-start; }
+  .time { font-weight: 700; min-width: 100px; font-size: 0.92rem; color: #0a0a0a; }
+  .activity { flex: 1; }
+  .activity-title { font-weight: 600; font-size: 0.95rem; }
+  .activity-desc { color: #666; font-size: 0.82rem; margin-top: 3px; }
+  .tag { display: inline-block; font-size: 0.68rem; padding: 1px 7px; border: 1px solid #ccc; border-radius: 3px; margin-left: 6px; color: #555; vertical-align: middle; }
+
+  .gap { padding: 8px 0; color: #999; font-size: 0.78rem; text-align: center; border-bottom: 1px dashed #ddd; }
+  .gap-sub { font-size: 0.68rem; color: #bbb; display: block; margin-top: 2px; }
+
+  .note { background: #f9f9f9; padding: 14px 18px; border-left: 3px solid #0a0a0a; margin: 20px 0; font-size: 0.85rem; color: #444; }
+  .note strong { color: #0a0a0a; }
+
+  .summary { margin-top: 28px; }
+  .summary h2 { font-size: 1.15rem; margin-bottom: 10px; }
+  .summary-table { width: 100%; border-collapse: collapse; font-size: 0.83rem; }
+  .summary-table th, .summary-table td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; }
+  .summary-table th { background: #f5f5f5; font-weight: 600; }
+  .summary-table td:last-child { text-align: right; }
+
+  @media (max-width: 600px) {
+    .time { min-width: 80px; font-size: 0.82rem; }
+    .activity-title { font-size: 0.88rem; }
+    body { padding: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="schedule">
+  <h1>📋 每日成长日程表</h1>
+  <p class="subtitle">7个模块 · 学习约10h + 洗漱1h · 23:00睡→6:00起 · 暑假专属版</p>
+
+  <!-- ========== 清晨段 6:00~7:30 ========== -->
+  <div class="period">
+    <div class="period-header">🌅 清晨段 <span class="period-duration">6:00 — 7:30（1.5小时）</span></div>
+
+    <div class="time-block">
+      <div class="time">06:00<br>10min</div>
+      <div class="activity">
+        <div class="activity-title">🛏 起床 + 喝水 + 简单拉伸</div>
+        <div class="activity-desc"><strong>具体做法：</strong>闹钟响立刻坐起来，双脚落地，不要按"再睡5分钟"。先喝一整杯温水（约300ml），可以加一片柠檬。拉伸动作：猫牛式（四足跪姿，吸气塌腰抬头、呼气拱背低头）×8次 → 站姿扩胸（双手背后交握，向后向上抬）×30秒 → 颈部绕圈（顺时针5圈+逆时针5圈，动作要慢）→ 站姿体前屈摸脚尖×30秒。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">06:10<br>40min</div>
+      <div class="activity">
+        <div class="activity-title">🏃 力量训练 <span class="tag">运动</span></div>
+        <div class="activity-desc"><strong>为什么早上练：</strong>清晨空腹时胰岛素水平低，身体更倾向于燃烧脂肪供能。练完一整天代谢率都会提高。<br><br><strong>按周计划执行：</strong>打开工作台「运动」模块查看当天训练内容。周一上肢、周三下肢、周五核心，以此类推。每个动作做之前先无负重试2次找感觉。<br><br><strong>关键细节：</strong>①组间休息45-90秒，不要坐着不动，站起来走走 ②休息时可以打开英语音频磨耳朵 ③每个动作最后一组的最后2次要做到"快做不动了"才算有效 ④练前不需要吃东西，但一定要喝够水 ⑤如果某个动作膝盖或腰部不舒服，立刻换替代动作。<br><br><strong>工具准备：</strong>瑜伽垫（必须）、哑铃一对（可用大瓶矿泉水替代）、弹力带（可选）。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">06:50<br>10min</div>
+      <div class="activity">
+        <div class="activity-title">🚿 快速冲凉</div>
+        <div class="activity-desc"><strong>具体做法：</strong>水温先温后凉——先用温水冲1分钟洗掉汗，最后30秒调凉一点（不是冰水），冷水刺激皮肤能收缩血管、提神醒脑。洗完后用毛巾擦干，换上白天穿的衣服。不要穿睡衣继续待着，换衣服这个动作本身就是心理暗示："新的一天开始了"。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">07:00<br>30min</div>
+      <div class="activity">
+        <div class="activity-title">📖 英语晨读 + 词汇 <span class="tag">英语</span></div>
+        <div class="activity-desc"><strong>为什么这个时间：</strong>睡了一晚大脑没有新信息干扰，短时记忆最干净。研究表明早晨记忆效率比下午高20-30%。<br><br><strong>具体流程（30分钟拆解）：</strong><br>① 前5分钟：打开昨天的笔记，快速浏览一遍昨天学的词根和例句，激活记忆。<br>② 5-20分钟（15分钟）：大声朗读新词根和例句。关键——要出声！嘴型要夸张！耳朵听到自己的声音能形成双重记忆回路。每个词根读3遍，例句读2遍。不会读的用手机查发音。<br>③ 20-30分钟（10分钟）：用单词本或Anki过生词。看到英文想中文意思，想不起来就点"忘记"，不要假装会了。每天目标：复习30个旧词 + 学10个新词。<br><br><strong>工具：</strong>Anki（推荐手机版AnkiDroid）、或直接手写单词本。手写比打字记得更牢。</div>
+      </div>
+    </div>
+
+    <div class="gap">07:30 — 08:00 做早餐+吃早餐 🥣<span class="gap-sub">早餐建议：鸡蛋+全麦面包+牛奶/豆浆。边吃可以边翻几页轻松的书。</span></div>
+  </div>
+
+  <!-- ========== 上午段 8:00~11:00 ========== -->
+  <div class="period">
+    <div class="period-header">☀️ 上午段 <span class="period-duration">8:00 — 11:00（3小时）</span></div>
+
+    <div class="time-block">
+      <div class="time">08:00<br>80min</div>
+      <div class="activity">
+        <div class="activity-title">📖 英语主课 <span class="tag">英语</span></div>
+        <div class="activity-desc"><strong>为什么这个时间：</strong>早餐后血糖回升，大脑能量充足，是一天中逻辑思维最好的时段。<br><br><strong>80分钟拆解：</strong><br>① 前30分钟（08:00-08:30）：看8000词课程，每集5-8分钟，大概看4-5集。打开笔记本，看到生词立刻暂停→抄下来→跟读3遍→继续播放。<br>② 休息5分钟（08:30-08:35）：站起来走两步，远眺窗外放松眼睛。不要刷手机！<br>③ 中间30分钟（08:35-09:05）：继续看课程3-4集，同样边看边记边跟读。<br>④ 休息5分钟（09:05-09:10）：闭眼做眼保健操或远眺。<br>⑤ 最后10分钟（09:10-09:20）：合上笔记，凭记忆默写今天学的5个最重要的词根+它们的例句关键词。想不起来的用红笔标注，这是明天晨读的重点。<br><br><strong>笔记方法：</strong>准备一个专门的英语笔记本。每页分两栏——左栏写词根/生词+音标，右栏写中文意思+自创例句。自创例句比抄例句记得牢5倍。<br><br><strong>课程来源：</strong>B站搜索"8000词词根词缀"，选播放量高、有体系的合集跟着学。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">09:20<br>10min</div>
+      <div class="activity">
+        <div class="activity-title">☕ 休息 + 眼睛放松</div>
+        <div class="activity-desc"><strong>具体做法：</strong>彻底离开书桌。泡杯茶或咖啡（绿茶提神抗氧化，推荐）。站到窗边远眺至少2分钟——看最远的建筑物或树，让睫状肌放松。做10次深呼吸（吸气4秒→屏住4秒→呼气6秒），这个呼吸节奏能降低皮质醇，帮大脑在英语和画画之间切换状态。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">09:30<br>90min</div>
+      <div class="activity">
+        <div class="activity-title">🎨 画画主课 <span class="tag">画画</span></div>
+        <div class="activity-desc"><strong>为什么这个时间：</strong>经过英语的高强度脑力消耗，画画用右脑，是一种转换也是放松。而且上午光线好（尤其靠窗），看细节不吃力。<br><br><strong>90分钟拆解——走两遍完整循环：</strong><br><br><strong>第一遍循环（09:30-10:10，40分钟）：</strong><br>① 看教学视频（10分钟）：打开当前阶段课程，完整看一遍，不要边看边画，先理解"为什么要这样画"。<br>② 动手临摹（20分钟）：跟着视频画。重点是"像"——比例、角度、线条方向尽量还原。不要追求快，一笔一笔来。<br>③ 对照反思（10分钟）：把自己的画和原图叠在一起看（可以举起来对着光），用红笔圈出不一样的地方。问自己：哪里偏了？哪条线长了？下次怎么改进？<br><br><strong>休息5分钟（10:10-10:15）：</strong>甩甩手腕，远眺放松。<br><br><strong>第二遍循环（10:15-11:00，45分钟）：</strong><br>① 再看视频（5分钟）：这次只看刚才自己画不好的那部分。<br>② 重新画（25分钟）：同一张图再画一遍，这次刻意修正上一遍的错误。不要求完美，只要求"比上一遍好一点"。<br>③ 对比反思（15分钟）：把两遍画的和原图放一起。通常第二遍会有明显进步，这个进步感是最好的正反馈。<br><br><strong>工具准备：</strong>素描本（A4或A5）、铅笔（2B+4B各一支）、橡皮（软橡皮+硬橡皮各一）、削笔刀。保持桌面整洁——画画时桌上只放纸笔，手机静音丢远点。<br><br><strong>当前阶段内容：</strong>打开工作台「画画」模块查看当前解锁阶段的视频资源，每天按轮换推送选择一条。</div>
+      </div>
+    </div>
+
+    <div class="gap">11:00 — 12:30 做饭+吃饭+洗碗 🍳<span class="gap-sub">午饭吃7分饱，碳水不要太多（容易犯困）。饭后洗碗就当站着消食。可以听播客或英语音频。</span></div>
+  </div>
+
+  <!-- ========== 下午段 12:30~16:50 ========== -->
+  <div class="period">
+    <div class="period-header">🌤 下午段 <span class="period-duration">12:30 — 16:50（约4.5小时）</span></div>
+
+    <div class="time-block">
+      <div class="time">12:30<br>30min</div>
+      <div class="activity">
+        <div class="activity-title">🎧 英语听力输入 <span class="tag">英语</span></div>
+        <div class="activity-desc"><strong>为什么这个时间：</strong>饭后血糖升高容易犯困，不适合高强度的主动学习。但"被动输入"完全不费脑——大脑在放松状态下反而更容易吸收语音节奏和语调。<br><br><strong>具体做法：</strong>戴上耳机（头戴式比入耳式舒服，适合长时间），躺沙发上或靠在椅子上。听沉浸式英语听力材料（B站 BV1AwpYz6Em7）。不用刻意听懂每一个词，重点是让大脑浸泡在英语的语音流里。可以闭眼，也可以半眯着。<br><br><strong>进阶技巧：</strong>如果精神状态还行，可以尝试"影子跟读"——耳机里说一句，你嘴巴跟着小声重复一句，比原声慢半拍。不用完全跟上，跟得上50%就很好了。这练的是听力+口语的神经连接。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">13:00<br>60min</div>
+      <div class="activity">
+        <div class="activity-title">📚 深度阅读 <span class="tag">输入输出</span></div>
+        <div class="activity-desc"><strong>为什么这个时间：</strong>消化得差不多了，血糖回稳，注意力恢复。下午第一个小时用来做需要持续专注的事——读书。<br><br><strong>具体做法（60分钟拆解）：</strong><br>① 前5分钟：回顾昨天读到哪了，翻翻昨天记的笔记，重新进入语境。<br>② 5-45分钟（40分钟）：专注阅读。一天读一章（约30-50页）。手上拿一支笔，读到有感触的句子就在旁边画一条竖线+写一两个关键词。不要划整段——划重点会让你以为自己"学会了"，其实没有。<br>③ 45-55分钟（10分钟）：合上书，在笔记本上写3点：这本书今天讲了什么（1句话概括）→ 最触动我的是什么（1句话）→ 我能用在哪（1句话）。<br>④ 最后5分钟：把这3点读一遍，确认自己真的理解了。<br><br><strong>读什么：</strong>打开工作台「输入输出」模块，按当前阶段推荐书目阅读。认知类、方法论类优先，小说可以放在晚上。<br><br><strong>工具：</strong>纸质书最好（没弹窗干扰），如果没有就用微信读书或Kindle（开飞行模式）。手机倒扣在桌上。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">14:00<br>40min</div>
+      <div class="activity">
+        <div class="activity-title">✍ 练字 <span class="tag">练字</span></div>
+        <div class="activity-desc"><strong>为什么这个时间：</strong>下午两点是人最容易感到困倦的时间之一。练字需要动手但不需要高强度脑力，是一种"主动休息"——既不会睡着，又让大脑换一种模式。<br><br><strong>40分钟拆解：</strong><br>① 前5分钟：打开当前阶段练字视频，看老师示范今天要练的笔画或字，注意起笔、行笔、收笔的节奏。<br>② 5-30分钟（25分钟）：临摹。先在描红纸上摹5遍感受笔画走向，然后在田字格上临10遍。每写一个字都和范字对比，找出不同，下一遍修正。不要一口气写20个，写一个比一个——写10个有反思的字，胜过写100个无脑的字。<br>③ 30-40分钟（10分钟）：挑出今天写得最好的3个字和最差的3个字。最好的拍照存起来（可以看到进步轨迹），最差的分析为什么差——是笔画角度不对？还是结构比例失衡？明天重点攻克这个毛病。<br><br><strong>工具：</strong>田字格练字本、钢笔或中性笔（0.5或0.7mm）、描红纸。如果用钢笔，墨水选黑色或蓝黑色。<br><br><strong>当前阶段：</strong>打开工作台「练字」模块，按阶段解锁的内容选择今天的练习重点。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">14:40<br>60min</div>
+      <div class="activity">
+        <div class="activity-title">💬 表达力训练 <span class="tag">表达力</span></div>
+        <div class="activity-desc"><strong>为什么这个时间：</strong>练完字手也活动开了，人也不困了。表达力需要开口说，下午家里安静没人打扰，正好大声练。<br><br><strong>60分钟拆解：</strong><br>① 前10分钟（14:40-14:50）：看今天的表达力视频（21天跟练合集每天一段），完整看一遍，了解今天的主题和技巧。<br>② 中间30分钟（14:50-15:20）：跟练。视频里说一句你跟着说一句。重点注意——语速、停顿、重音、语调变化。对着镜子练可以看到自己的表情和肢体语言，这是表达力很重要的一部分（据说沟通中语言只占7%，语调和肢体占93%）。<br>③ 15:20-15:30：录音。用手机录一段今天学的内容（1-2分钟即可），然后回听。听自己的声音一开始会觉得别扭，但这是进步最快的方式——你会立刻发现哪里卡壳了、哪里语气太平了。<br>④ 最后10分钟（15:30-15:40）：针对录音里的问题再练一遍。把卡壳的句子反复说3-5遍直到流畅。<br><br><strong>进阶技巧：</strong>如果你愿意，可以选一个今天读书时读到的观点，用1分钟口头讲清楚。这就是"即兴表达"的雏形——把读进去的东西说出来。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">15:40<br>50min</div>
+      <div class="activity">
+        <div class="activity-title">🎨 画画第二练 <span class="tag">画画</span></div>
+        <div class="activity-desc"><strong>为什么需要第二次：</strong>画画是肌肉记忆，一天练一次和一天练两次，进步速度不是2倍是5倍。因为睡眠会在两次练习之间帮你巩固神经连接。<br><br><strong>50分钟拆解：</strong><br>① 前5分钟：翻看上午画的两张，回顾当时反思出的问题。<br>② 5-25分钟（20分钟）：不学新内容，把上午画过的同一张图再画一遍。这次你的手已经"睡过一觉"（比喻说法），通常会发现比上午画得更顺。刻意修正上午发现的问题。<br>③ 25-45分钟（20分钟）：如果上午的内容已经画熟了，选brokendraw的25个练习中的1-2个来做。这些是短小精悍的专项训练，每个10-15分钟。<br>④ 最后5分钟：把今天所有画放在一起拍张合影。看着3张画排在一起，能直观感受到"今天进步了"。<br><br><strong>核心心态：</strong>重复练习比学新东西更重要。一天画3张同样的苹果，比一天画苹果、橘子、香蕉各1张进步更快。专注一个点打到透，再换下一个。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">16:30<br>20min</div>
+      <div class="activity">
+        <div class="activity-title">📝 费曼输出 <span class="tag">输入输出</span></div>
+        <div class="activity-desc"><strong>什么是费曼输出：</strong>诺贝尔物理学奖得主费曼的学习方法——如果你不能简单地解释一个东西，说明你没有真正理解它。<br><br><strong>具体做法（20分钟）：</strong><br>① 合上今天读的书，拿出一张白纸。<br>② 在纸的最上方写下今天读的那一章的标题。<br>③ 假装你在给一个完全不懂这个领域的朋友讲解。用最简单的话、最生活化的比喻，把这一章的核心观点写出来。不许用术语，用了就要解释。<br>④ 写到讲不清的地方——停下来。这个地方就是你今天没真懂的。回头翻书，找到那一页重读，然后再写。<br>⑤ 最后在纸的底部写一行："如果只能记住一点，那就是______"——填上今天最重要的一个收获。<br><br><strong>这张纸怎么处理：</strong>拍照存到手机备忘录里，或者直接夹在书里。一周后翻出来看，你会惊讶自己当时理解得这么透彻（或者这么肤浅）。两种结果都有价值。</div>
+      </div>
+    </div>
+
+    <div class="gap">17:00 — 18:40 做饭+吃饭+洗碗 🍳<span class="gap-sub">晚饭可以稍微丰盛一点，但不要吃到撑。边做饭可以边听播客或有声书。洗碗时站着顺便拉伸一下腰。</span></div>
+  </div>
+
+  <!-- ========== 晚上段 18:40~22:00 ========== -->
+  <div class="period">
+    <div class="period-header">🌙 晚上段 <span class="period-duration">18:40 — 22:00（约3小时）</span></div>
+
+    <div class="time-block">
+      <div class="time">18:40<br>30min</div>
+      <div class="activity">
+        <div class="activity-title">🚶 饭后散步 + 🎧 英语听力 <span class="tag">英语</span></div>
+        <div class="activity-desc"><strong>具体做法：</strong>换鞋出门，在小区或附近公园走两圈（约2000-3000步）。耳机里放英语影子跟读材料（B站 BV1nq4y1G7FH），边走边小声跟读——周围没人听得见的音量就行。<br><br><strong>为什么有效：</strong>走路时有节奏的身体运动能增强记忆编码。边走边听边说的"三位一体"学习法，比坐在桌前只听不动的效果好得多。而且晚饭后立刻散步15-30分钟，血糖不会飙升，晚上不容易犯困。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">19:10<br>60min</div>
+      <div class="activity">
+        <div class="activity-title">🎨 画画第三练 <span class="tag">画画</span></div>
+        <div class="activity-desc"><strong>为什么需要第三次：</strong>晚上的画和前两次不一样——不跟教程、不临摹、不追求"像"。这是你一天中唯一完全属于自己的创作时间。白天学的是"技"，晚上练的是"表达"。<br><br><strong>60分钟拆解：</strong><br>① 前5分钟：翻翻今天画的所有东西，感受一下自己今天的手感在什么水平。<br>② 5-50分钟（45分钟）：自由创作。画任何你想画的东西——今天散步看到的一棵树、脑子里冒出来的一个奇怪角色、或者纯粹涂线条玩。唯一规则：不许用橡皮。画错了就画错了，将错就错往下走。自由创作最大的敌人就是"怕画不好"。<br>③ 最后10分钟：给你的画起个名字，写上日期。如果愿意，可以发朋友圈或小红书（不强制，但外界的正反馈会让你更有动力坚持）。<br><br><strong>替代方案：</strong>如果实在不知道画什么，可以选brokendraw的创意绘画视频——这些视频不讲技法，只带你玩创意，很适合晚上放松着画。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">20:10<br>40min</div>
+      <div class="activity">
+        <div class="activity-title">📖 英语巩固 <span class="tag">英语</span></div>
+        <div class="activity-desc"><strong>为什么这个时间：</strong>根据艾宾浩斯遗忘曲线，学完新知识9小时后是第一个遗忘高峰。早上8点学的英语，到晚上8点刚好过了12小时——这是复习的黄金窗口。在这个时间点巩固一次，记忆留存率能从30%提升到70%以上。<br><br><strong>40分钟拆解：</strong><br>① 前10分钟：打开早上英语课的笔记本，遮住中文意思，看英文词根想中文。想不起来的用红笔画圈。<br>② 10-25分钟（15分钟）：把画圈的那几个词根重新学一遍——读例句、自己再造一个新例句。重点攻克这几个"钉子户"。<br>③ 25-40分钟（15分钟）：如果精力还行，再看1-2集新课程。晚上不追求学很多新内容，1-2集就够了。如果累了，就用这段时间看一集英语vlog或TED演讲（开英文字幕），保持语感。<br><br><strong>工具：</strong>早上的英语笔记本 + 一支红笔。红笔圈出来的词就是明天晨读的第一优先级。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">20:50<br>30min</div>
+      <div class="activity">
+        <div class="activity-title">🎵 唱歌 <span class="tag">唱歌</span></div>
+        <div class="activity-desc"><strong>为什么放在晚上：</strong>唱歌是最好的减压方式之一。唱的时候深呼吸+发声振动胸腔，能刺激迷走神经，降低心率，让人从一天的紧张中放松下来。<br><br><strong>30分钟拆解：</strong><br>① 前5分钟：呼吸热身。腹式呼吸——一只手放肚子上一只手放胸口，吸气时只让肚子鼓起来（胸口不动），呼气时肚子收回去。做10次。<br>② 5-15分钟（10分钟）：跟着122集声乐教程练发声。今天学什么就看什么，按顺序走。重点练气息支撑——不是用嗓子喊，是用肚子推气。<br>③ 15-30分钟（15分钟）：选一首你喜欢的歌完整唱一遍。录下来，回听。不是为了挑剔自己，是为了听到进步——上周唱不上去的高音这周可能就上去了。<br><br><strong>工具：</strong>手机录音功能就够了。如果想更专业，可以下载"全民K歌"或"唱吧"，有伴奏和打分，更有趣。<br><br><strong>注意事项：</strong>唱歌前喝温水（不要冰的），唱的时候不要硬飙高音，感觉嗓子不舒服就停下来。保护嗓子比唱得好听更重要。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">21:20<br>25min</div>
+      <div class="activity">
+        <div class="activity-title">📝 复盘 + 打卡 <span class="tag">收尾</span></div>
+        <div class="activity-desc"><strong>为什么这个环节最重要：</strong>没有复盘的练习是"伪勤奋"。练了一天但不知道练得怎么样，等于白练一半。<br><br><strong>25分钟拆解：</strong><br>① 前10分钟：打开成长工作台，逐个模块打卡——输入输出、表达力、练字、画画、英语、唱歌、运动。如实记录今天每个模块的练习时长。不要虚报——数据是自己看的，骗自己没有意义。<br>② 10-20分钟（10分钟）：回答三个复盘问题，写在打卡备注里：<br>&nbsp;&nbsp;🔹 今天哪个练习最有收获？为什么？<br>&nbsp;&nbsp;🔹 今天哪里卡住了？是什么原因？<br>&nbsp;&nbsp;🔹 明天最重要的一个重点是什么？<br>③ 最后5分钟：检查明天的周计划——如果是周一，确认运动是上肢训练；看看画画和英语当前阶段还有多少内容没解锁。<br><br><strong>工具：</strong>成长工作台（你现在就在用的这个）。所有打卡数据自动保存到浏览器本地，不会丢失。<br><br><strong>心态提醒：</strong>如果今天某个模块没完成，不要自责。在备注里写清楚原因（比如"下午临时有事"或"状态不好只练了20分钟"），这比假装完成了更有价值。诚实面对自己，才能持续改进。</div>
+      </div>
+    </div>
+
+    <div class="gap">21:45 — 22:00 收拾桌面，准备洗漱 🧹<span class="gap-sub">把书和本子放回原位，铅笔削好、钢笔盖好。明天的你会感谢今晚收拾桌面的你。整洁的环境 = 整洁的头脑。</span></div>
+  </div>
+
+  <!-- ========== 睡前洗漱 22:00~23:00 ========== -->
+  <div class="period">
+    <div class="period-header">🛁 睡前洗漱段 <span class="period-duration">22:00 — 23:00（1小时）</span></div>
+
+    <div class="time-block">
+      <div class="time">22:00<br>30min</div>
+      <div class="activity">
+        <div class="activity-title">🚿 洗澡 + 护肤</div>
+        <div class="activity-desc"><strong>具体流程：</strong><br>① 调水温：40°C左右，比体温略高。水太热会破坏皮肤屏障，太冷放松不了。<br>② 洗头（如果需要）：洗发水在掌心搓出泡沫再上头，指腹按摩头皮（不是指甲抓），冲干净后上护发素（只抹发尾，不要碰到头皮）。<br>③ 洗脸：用温和的洗面奶，重点洗T区（额头+鼻子+下巴）。温水冲净后用洗脸巾轻轻按干（不要来回搓）。<br>④ 身体：沐浴露起泡后从脖子往下洗。特别注意耳后、腋下、脚趾缝——这些地方容易忽略。<br><br><strong>护肤流程（洗完澡立刻做，趁毛孔还开着）：</strong><br>第一步 爽肤水/化妆水：倒在掌心拍在脸上，轻拍至吸收。<br>第二步 精华：取1-2滴在指尖，点涂额头、两颊、鼻子、下巴，然后从内向外轻轻推开。不要用力搓。<br>第三步 乳液/面霜：锁住前面补进去的水分。同样从内向外推开，脖子也要涂（脖子最容易暴露年龄）。<br>第四步（可选）眼霜：无名指取米粒大小，轻轻点拍在眼周。眼周皮肤最薄，力度一定要轻。<br><br><strong>额外提醒：</strong>每周做1-2次深层清洁（清洁面膜或去角质），但不要和刷牙一样天天做。过度清洁比不清洁更伤皮肤。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">22:30<br>20min</div>
+      <div class="activity">
+        <div class="activity-title">🪥 刷牙 + 口腔护理</div>
+        <div class="activity-desc"><strong>刷牙（至少3分钟）：</strong><br>① 牙刷选软毛的，牙膏挤黄豆大小就够了（广告里挤满一整条是骗你多用的）。<br>② 巴氏刷牙法：牙刷45度角对着牙龈沟，小幅度水平震动（幅度不超过1颗牙），每次刷2-3颗牙。外侧→内侧→咬合面，按顺序来，不要东刷一下西刷一下。<br>③ 刷舌头：从舌根往舌尖轻刷3-5下，去除舌苔（舌苔是口臭的主要来源）。<br>④ 刷完不要立刻漱口太多次——让牙膏里的氟在牙齿上多停留一会儿。<br><br><strong>牙线（这步很多人跳过但极其重要）：</strong><br>取一段约30cm的牙线，绕在中指上。轻轻拉锯式进入牙缝（不要暴力怼），贴着牙面呈C字形刮3-4下。每个牙缝都要清。刚开始用牙线牙龈可能会出血，这是牙龈炎的表现，坚持一周就不出了。<br><br><strong>漱口水（可选）：</strong>含在嘴里咕噜咕噜30秒吐掉。用了漱口水之后半小时内不要喝水吃东西，让有效成分停留。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">22:50<br>10min</div>
+      <div class="activity">
+        <div class="activity-title">📵 放下手机 + 放松</div>
+        <div class="activity-desc"><strong>为什么这10分钟决定了明天的状态：</strong>手机屏幕的蓝光抑制褪黑素分泌，会让你入睡困难+睡眠质量下降。睡前10分钟不看屏幕，入睡速度快20-30分钟。<br><br><strong>具体做法（三选一，每天换着来）：</strong><br>① 冥想（推荐）：坐在床上，闭上眼睛，专注于自己的呼吸。吸气时心里默念"吸"，呼气时默念"呼"。思绪跑掉很正常，发现自己走神了就温柔地把注意力拉回呼吸上。5分钟就够了。可以用"潮汐"或"小睡眠"App辅助。<br>② 渐进式肌肉放松：从脚趾开始，逐一收紧→保持5秒→彻底放松。脚趾→小腿→大腿→腹部→胸部→手臂→肩膀→面部。做完你会感觉身体像融化在床垫上。<br>③ 翻几页轻松的书：纸质书！不是手机！选一本不费脑的——散文、漫画、诗集都可以。看到眼皮打架就合上书关灯。<br><br><strong>手机放哪：</strong>放在你伸手够不到的地方。床头柜上充电是最差选择——半夜醒了随手拿起来刷，一刷就天亮。理想位置是房间另一头的桌子上。</div>
+      </div>
+    </div>
+
+    <div class="gap">23:00 关灯睡觉 😴<span class="gap-sub">保证全黑环境——拉好窗帘、关掉所有指示灯。如果需要，戴眼罩。室温18-22°C最适合入睡。明天6:00见。</span></div>
+  </div>
+
+  <!-- ========== 核心原则 ========== -->
+  <div class="note">
+    <strong>🎯 核心原则：</strong><br>
+    • <strong>英语和画画</strong>是你最大的两个投入方向，每天各有3个时段——上午新学、下午练习、晚上巩固/创作<br>
+    • <strong>运动</strong>清晨第一件事，空腹练完冲个凉，一整天都精神。周日休息一天让肌肉恢复<br>
+    • <strong>晨读</strong>利用清晨记忆力最好的30分钟大声朗读英语，嘴+耳+眼三重编码<br>
+    • <strong>练字和表达力</strong>下午安静时做，都是需要专注的静功，互相交替让大脑不同区域轮流休息<br>
+    • <strong>输入输出</strong>贯穿全天：早饭看书、下午精读+费曼输出。读书不输出等于没读<br>
+    • <strong>唱歌</strong>放在晚上，当放松和减压，不用有压力，享受过程比技术正确更重要<br>
+    • <strong>洗漱</strong>22:00-23:00完整1小时，认真对待自己的身体。自我投资从好好洗脸刷牙开始<br><br>
+    <strong>📌 弹性原则：</strong>如果某天状态不好，优先保证：英语 > 画画 > 运动 > 其他。完成60%就是胜利。记住——<strong>连续比完美更重要。</strong>一天只做了运动+英语，也比因为"不够完美"而什么都不做强100倍。
+  </div>
+
+  <!-- ========== 总结表 ========== -->
+  <div class="summary">
+    <h2>每日时间分配总览</h2>
+    <table class="summary-table">
+      <tr><th>模块</th><th>每日时长</th><th>时段分布</th></tr>
+      <tr><td>🎨 画画</td><td>3小时20分</td><td>上午90min（主课） + 下午50min（第二练） + 晚上60min（自由创作）</td></tr>
+      <tr><td>📖 英语</td><td>2小时30分</td><td>清晨30min（晨读） + 上午80min（主课） + 下午30min（听力） + 晚上40min（巩固）</td></tr>
+      <tr><td>📚 输入输出</td><td>1小时20分</td><td>早饭20min（看书） + 下午60min（精读） + 下午20min（费曼输出）</td></tr>
+      <tr><td>💬 表达力</td><td>60分钟</td><td>下午 14:40-15:40</td></tr>
+      <tr><td>✍ 练字</td><td>40分钟</td><td>下午 14:00-14:40</td></tr>
+      <tr><td>🏃 运动</td><td>40分钟</td><td>清晨 06:10-06:50</td></tr>
+      <tr><td>🎵 唱歌</td><td>30分钟</td><td>晚上 20:50-21:20</td></tr>
+      <tr style="font-weight:700;background:#f9f9f9;"><td>成长学习</td><td>约10小时</td><td>清晨1.5h + 上午3h + 下午4.5h + 晚上2.5h</td></tr>
+      <tr><td>🛁 睡前洗漱</td><td>1小时</td><td>22:00-23:00</td></tr>
+      <tr style="font-weight:700;background:#f9f9f9;"><td>合计（含洗漱）</td><td>约13小时</td><td>6:00 — 23:00</td></tr>
+      <tr style="font-weight:700;background:#f9f9f9;"><td>😴 睡眠</td><td>7小时</td><td>23:00 — 6:00</td></tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>

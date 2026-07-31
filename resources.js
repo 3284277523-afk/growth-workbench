@@ -1,8 +1,121 @@
 // ============================================================
-// 五模块系统化学习资源数据（已更新真实可访问链接 2026-07-31）
+// 七模块系统化学习资源数据（已更新真实可访问链接 2026-07-31）
 // ============================================================
 
 const MODULE_RESOURCES = {
+
+  // ======================== 输入与输出 ========================
+  intake: {
+    name: "输入输出",
+    icon: "📚",
+    stages: [
+      {
+        id: "book-1",
+        label: "第一本·认知破局",
+        unlockDays: 0,
+        resources: [
+          { title: "📖 《认知觉醒》— 开启自我改变的元认知", url: "https://www.bilibili.com/video/BV1XY411J7aG/", source: "B站", duration: "约7天", tip: "周岭著。为什么懂得很多道理却过不好？这本书解决'知道但做不到'的核心问题。看完做：写3条最触动你的认知+1个立刻行动" },
+          { title: "配套：周岭《认知觉醒》全书解读视频", url: "https://www.bilibili.com/search?keyword=%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92%20%E8%A7%A3%E8%AF%BB", source: "B站搜索", duration: "系列", tip: "B站搜'认知觉醒 解读'有大量优质UP主逐章解读，挑一个跟完即可" },
+        ]
+      },
+      {
+        id: "book-2",
+        label: "第二本·深度工作",
+        unlockDays: 10,
+        resources: [
+          { title: "📖 《深度工作》— 在分心时代专注成事", url: "https://www.bilibili.com/search?keyword=%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C%20%E8%A7%A3%E8%AF%BB", source: "B站搜索", duration: "约7天", tip: "卡尔·纽波特著。你每天在多个模块间切换，这本书教你如何进入深度专注。看完做：制定一个每日'深度时段'时间块" },
+        ]
+      },
+      {
+        id: "book-3",
+        label: "第三本·非暴力沟通",
+        unlockDays: 20,
+        resources: [
+          { title: "📖 《非暴力沟通》— 用爱的语言化解冲突", url: "https://www.bilibili.com/video/BV1RA411T7Y8/", source: "B站", duration: "约5天", tip: "马歇尔·卢森堡著。有声书全15P，边听边做笔记。看完做：用非暴力沟通四步法（观察-感受-需要-请求）写一段真实对话" },
+        ]
+      },
+      {
+        id: "film",
+        label: "值得看的电影",
+        unlockDays: 0,
+        resources: [
+          { title: "🎬 《国王的演讲》— 口吃国王如何学会表达", url: "https://www.bilibili.com/search?keyword=%E5%9B%BD%E7%8E%8B%E7%9A%84%E6%BC%94%E8%AE%B2", source: "B站搜索", duration: "2小时", tip: "表达力必看电影。看完做：写下3个你从国王身上学到的克服表达恐惧的方法" },
+          { title: "🎬 《心灵捕手》— 天才少年的自我和解", url: "https://www.bilibili.com/search?keyword=%E5%BF%83%E7%81%B5%E6%8D%95%E6%89%8B", source: "B站搜索", duration: "2小时", tip: "关于天赋、方向与被看见。看完做：找一个人聊聊你'真正想做的事'" },
+          { title: "🎬 《阿甘正传》— 简单的人不简单的力量", url: "https://www.bilibili.com/search?keyword=%E9%98%BF%E7%94%98%E6%AD%A3%E4%BC%A0", source: "B站搜索", duration: "2.5小时", tip: "不聪明但专注，反而走得最远。看完做：写一段你'只管跑'的经历" },
+        ]
+      },
+      {
+        id: "documentary",
+        label: "纪录片·拓宽认知",
+        unlockDays: 0,
+        resources: [
+          { title: "🎞 《人生七年》— 14个孩子56年人生追踪", url: "https://www.bilibili.com/search?keyword=%E4%BA%BA%E7%94%9F%E4%B8%83%E5%B9%B4", source: "B站搜索", duration: "系列", tip: "BBC经典，从7岁跟拍到63岁。看完做：写下你7岁、14岁、现在的三个变化" },
+          { title: "🎞 《富豪谷底求翻身》— 100美元创业挑战", url: "https://www.bilibili.com/search?keyword=%E5%AF%8C%E8%B1%AA%E8%B0%B7%E5%BA%95%E6%B1%82%E7%BF%BB%E8%BA%AB", source: "B站搜索", duration: "8集", tip: "Undercover Billionaire第一季。看完做：列出你身边被忽视的3个机会" },
+        ]
+      },
+      {
+        id: "output",
+        label: "输出方法",
+        unlockDays: 0,
+        resources: [
+          { title: "看完书/电影后做什么？费曼输出法详解", url: "https://www.bilibili.com/search?keyword=%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95", source: "B站搜索", duration: "系列", tip: "核心：用最简单的话把学到的讲给不懂的人听。讲不清楚=没真懂。每看完一本书做一次费曼输出" },
+        ]
+      }
+    ]
+  },
+
+  // ======================== 表达力 ========================
+  expression: {
+    name: "表达力",
+    icon: "💬",
+    stages: [
+      {
+        id: "mindset",
+        label: "认知破冰",
+        unlockDays: 0,
+        resources: [
+          { title: "⭐ 提升表达能力做这一件事就够了，一个月见效", url: "https://www.bilibili.com/video/BV12h4y1g7Nt/", source: "B站", duration: "5分钟", tip: "130万播放/11.7万收藏🔥 园姐不设限版：嘴笨不是天生的，是没找对方法" },
+          { title: "峰哥第一百遍回答：如何提高表达能力", url: "https://www.bilibili.com/video/BV18m4y1a7jm/", source: "B站", duration: "4分钟", tip: "12.7万播放，反复被问所以反复回答，最朴素有效的表达提升路径" },
+        ]
+      },
+      {
+        id: "daily-practice",
+        label: "每日跟练",
+        unlockDays: 3,
+        resources: [
+          { title: "21天表达能力训练·三周跟练（经典演讲模仿+口才书籍）", url: "https://www.bilibili.com/video/BV1P54y1u7d2/", source: "B站", duration: "6小时", tip: "45万播放/3.4万收藏🔥 超长合集，每天跟着练一段，三周见效，评论区附书单" },
+          { title: "「表达能力练习·跟练版」邹韵三分钟自我展示（央视主持人大赛）", url: "https://www.bilibili.com/video/BV1SaqZBTEus/", source: "B站", duration: "13分钟", tip: "11.9万播放/6725收藏，跟着央视主持人学表达节奏和气场" },
+        ]
+      },
+      {
+        id: "structure",
+        label: "结构化表达",
+        unlockDays: 14,
+        resources: [
+          { title: "【庞颖】专治嘴笨·《金字塔原理》帮你高效思考表达（奇葩说辩手）", url: "https://www.bilibili.com/video/BV1DM4y177Yq/", source: "B站", duration: "30分钟", tip: "180万播放/15.2万收藏🔥🔥 奇葩说辩手庞颖精讲金字塔原理，结构化表达第一课" },
+          { title: "夏鹏精读《金字塔原理》：把表达的逻辑搞清楚", url: "https://www.bilibili.com/video/BV1c84y1T7GZ/", source: "B站", duration: "20分钟", tip: "22.7万播放/1.5万收藏，更深入的逐章精读，搭配庞颖视频效果最佳" },
+        ]
+      },
+      {
+        id: "impromptu",
+        label: "即兴表达",
+        unlockDays: 30,
+        resources: [
+          { title: "5个即兴发言万能公式·摆脱演讲焦虑", url: "https://www.bilibili.com/video/BV1g34y1Z7XR/", source: "B站", duration: "15分钟", tip: "50万播放/4.7万收藏🔥 临时被叫发言不再大脑空白，5个公式直接套" },
+          { title: "【胡渐彪】一发言就紧张？奇葩说辩手教你做有准备的即兴演讲", url: "https://www.bilibili.com/video/BV1Wu4y1k7Qn/", source: "B站", duration: "25分钟", tip: "15.3万播放/1.2万收藏，奇葩说辩手实战经验，从焦虑到出口成章" },
+        ]
+      },
+      {
+        id: "communication",
+        label: "沟通进阶",
+        unlockDays: 45,
+        resources: [
+          { title: "语言暴力无处不在·读懂《非暴力沟通》改善人际关系", url: "https://www.bilibili.com/video/BV19K411H7cF/", source: "B站", duration: "20分钟", tip: "36.7万播放/2.3万收藏，David读书分享，从'表达自己'到'有效沟通'的跨越" },
+          { title: "【有声书】《非暴力沟通》全15P完整版", url: "https://www.bilibili.com/video/BV1RA411T7Y8/", source: "B站", duration: "15集", tip: "10.8万播放，全书原貌听读，适合通勤路上反复听" },
+        ]
+      }
+    ]
+  },
 
   // ======================== 练字 ========================
   calligraphy: {
@@ -327,6 +440,33 @@ const MODULE_RESOURCES = {
         { name: "泡沫轴放松", sets: "1组", reps: "10-15分钟", difficulty: "⭐" },
       ]},
     ]
+  },
+
+  // ======================== 每日日程 ========================
+  schedule: {
+    name: "每日日程",
+    icon: "📋",
+    stages: [],
+    showProgress: false,
+    weeklyPlan: false
+  },
+
+  // ======================== 记账 ========================
+  finance: {
+    name: "记账",
+    icon: "💰",
+    stages: [],
+    showProgress: false,
+    weeklyPlan: false
+  },
+
+  // ======================== 科技资讯 ========================
+  news: {
+    name: "科技资讯",
+    icon: "📡",
+    stages: [],
+    showProgress: false,
+    weeklyPlan: false
   }
 };
 
