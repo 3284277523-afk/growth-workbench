@@ -2,29 +2,38 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>个人成长与技能学习工作台</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>个人成长工作台</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="app-container">
-    <!-- 汉堡菜单按钮 -->
-    <button class="hamburger" id="hamburger-btn" aria-label="菜单">
-      <span></span><span></span><span></span>
-    </button>
-    <!-- 遮罩层 -->
-    <div class="sidebar-overlay" id="sidebar-overlay"></div>
-    <!-- 侧边栏 -->
+    <!-- 左侧常驻导航 -->
     <nav class="sidebar" id="sidebar">
       <div class="sidebar-logo">
+        <div class="logo-icon">🌱</div>
         <h1>成长工作台</h1>
-        <p class="subtitle">Skill Growth Tracker</p>
       </div>
-      <div class="sidebar-date" id="current-date">----</div>
+      <div class="sidebar-date" id="current-date">--</div>
       <ul class="nav-list" id="nav-list"></ul>
-      <div class="sidebar-footer">Ctrl+1~9,0 快速切换 · 数据存于本地</div>
     </nav>
-    <main class="main-content" id="main-content"></main>
+
+    <!-- 主内容区 -->
+    <div class="content-area">
+      <!-- 顶部每日好句 -->
+      <header class="top-bar" id="top-bar">
+        <div class="quote-block quote-en">
+          <span class="quote-label">EN</span>
+          <span id="daily-en">Loading...</span>
+        </div>
+        <div class="quote-block quote-cn">
+          <span class="quote-label">☀️</span>
+          <span id="daily-cn">Loading...</span>
+        </div>
+      </header>
+
+      <main class="main-content" id="main-content"></main>
+    </div>
   </div>
   <script src="resources.js"></script>
   <script src="app.js"></script>
