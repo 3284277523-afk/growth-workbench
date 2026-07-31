@@ -5,7 +5,7 @@
 const App = (() => {
   const STORAGE_KEY = 'growth_workbench_data';
   const COIN_KEY = 'growth_workbench_coins';
-  const MODULES = ['intake', 'expression', 'calligraphy', 'drawing', 'vocabulary', 'singing', 'sports', 'schedule', 'finance', 'news'];
+  const MODULES = ['schedule', 'news', 'finance', 'calligraphy', 'intake', 'drawing', 'expression', 'vocabulary', 'sports', 'singing'];
   let currentModule = 'schedule';
 
   // ---------- 奖励商店 ----------
