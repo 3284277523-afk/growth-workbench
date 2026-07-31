@@ -7,6 +7,7 @@ const App = (() => {
   const COIN_KEY = 'growth_workbench_coins';
   const VOCAB_KEY = 'growth_workbench_vocab';
   const QUOTE_KEY = 'growth_workbench_quote';
+  const SIGNIN_KEY = 'growth_workbench_signin';
   const MODULES = ['schedule', 'news', 'finance', 'calligraphy', 'intake', 'drawing', 'expression', 'vocabulary', 'sports', 'singing'];
   let currentModule = 'schedule';
 
@@ -220,6 +221,110 @@ const App = (() => {
     if (cnEl) cnEl.textContent = quote.cn;
   }
 
+  // ---------- 每日签到 ----------
+  function getSigninData() {
+    try {
+      const raw = localStorage.getItem(SIGNIN_KEY);
+      return raw ? JSON.parse(raw) : { dates: [], streak: 0, lastDate: null };
+    } catch { return { dates: [], streak: 0, lastDate: null }; }
+  }
+
+  function saveSigninData(data) { localStorage.setItem(SIGNIN_KEY, JSON.stringify(data)); }
+
+  function isTodaySigned() {
+    const data = getSigninData();
+    return data.lastDate === formatDate(new Date());
+  }
+
+  function doSignin() {
+    if (isTodaySigned()) return false;
+    const today = formatDate(new Date());
+    const data = getSigninData();
+    data.dates.push(today);
+    data.lastDate = today;
+
+    // 计算连续签到
+    const yesterday = formatDate(new Date(Date.now() - 86400000));
+    if (data.dates.includes(yesterday) || data.streak === 0) {
+      data.streak++;
+    } else {
+      data.streak = 1;
+    }
+    saveSigninData(data);
+
+    // 金币奖励：基础5 + 连续加成（每连签1天+1，上限+10）
+    const bonus = Math.min(data.streak, 10);
+    const total = 5 + bonus;
+    addCoins(total, '每日签到 · 连续' + data.streak + '天');
+    toast('✅ 签到成功！+'+total+'💰（连续'+data.streak+'天）');
+    return true;
+  }
+
+  function renderSigninSection() {
+    const signed = isTodaySigned();
+    const data = getSigninData();
+
+    // 最近7天签到格子
+    const days = [];
+    for (let i = 6; i >= 0; i--) {
+      const d = new Date(); d.setDate(d.getDate() - i);
+      days.push(formatDate(d));
+    }
+
+    let html = '<div class="panel signin-panel"><div class="panel-header">🗓️ 每日签到</div><div class="panel-body">';
+    html += '<div class="signin-row">';
+
+    // 签到格子
+    html += '<div class="signin-grid">';
+    const weekLabels = ['一','二','三','四','五','六','日'];
+    days.forEach((ds, i) => {
+      const isToday = ds === formatDate(new Date());
+      const isSigned = data.dates.includes(ds);
+      const d = new Date(ds);
+      html += '<div class="signin-cell' + (isSigned ? ' signed' : '') + (isToday ? ' today' : '') + '">';
+      html += '<div class="signin-day">' + weekLabels[d.getDay() === 0 ? 6 : d.getDay() - 1] + '</div>';
+      html += '<div class="signin-date">' + d.getDate() + '</div>';
+      html += '<div class="signin-icon">' + (isSigned ? '✓' : '') + '</div>';
+      html += '</div>';
+    });
+    html += '</div>';
+
+    // 签到按钮
+    html += '<div class="signin-action">';
+    html += '<div class="signin-streak">🔥 连续 <strong>' + data.streak + '</strong> 天</div>';
+    html += '<button class="btn btn-primary signin-btn' + (signed ? ' done' : '') + '" id="btn-signin"' + (signed ? ' disabled' : '') + '>';
+    html += signed ? '✅ 今日已签到' : '✍️ 签到领金币';
+    html += '</button>';
+    html += '<div class="signin-hint">' + (signed ? '明天继续！连签越久金币越多' : '签到 +5💰，连签每天多+1💰（上限+10）') + '</div>';
+    html += '</div>';
+
+    html += '</div></div></div>';
+    return html;
+  }
+
+  function bindSigninEvents() {
+    const btn = document.getElementById('btn-signin');
+    if (!btn || btn.disabled) return;
+    btn.addEventListener('click', () => {
+      const success = doSignin();
+      if (success) {
+        btn.textContent = '✅ 今日已签到';
+        btn.classList.add('done');
+        btn.disabled = true;
+        // 更新格子
+        document.querySelectorAll('.signin-cell').forEach(cell => {
+          const dateEl = cell.querySelector('.signin-date');
+          if (dateEl && dateEl.textContent == new Date().getDate()) {
+            cell.classList.add('signed');
+            cell.querySelector('.signin-icon').textContent = '✓';
+          }
+        });
+        document.querySelector('.signin-streak strong').textContent = getSigninData().streak;
+        document.querySelector('.signin-hint').textContent = '明天继续！连签越久金币越多';
+      }
+    });
+  }
+
   // ---------- 日历 ----------
   function renderCalendar(container) {
     const today = new Date();
@@ -260,6 +365,9 @@ const App = (() => {
     const main = document.getElementById('main-content');
     let html = '<div class="module-header"><h2>📋 每日计划</h2><p class="module-desc">根据日程生成的今日待办</p></div>';
 
+    // 每日签到
+    html += renderSigninSection();
+
     html += '<div class="daily-overview">';
 
     // 待办列表
@@ -280,6 +388,8 @@ const App = (() => {
     html += '</div>';
 
     main.innerHTML = html;
+
+    bindSigninEvents();
 
     // 恢复打卡状态
     const done = getData().todos || [];
@@ -351,36 +461,59 @@ const App = (() => {
     const stats = getStats('vocabulary');
     const vocab = getVocabData();
     const reviewCount = vocab.words.filter(w => getReviewStatus(w) === 'review').length;
+    const todayCount = vocab.words.filter(w => formatDate(w.createdAt || new Date()) === formatDate(new Date())).length;
 
     let html = '<div class="module-header"><h2>📚 英语学习</h2><p class="module-desc">单词本 · 艾宾浩斯复习提醒</p></div>';
 
-    // 统计卡片
+    // 统计卡片（截图风格：两个绿色大数字卡片）
     html += '<div class="vocab-header">';
-    html += '<div class="vocab-stat"><div class="vocab-stat-value">' + vocab.words.length + '</div><div class="vocab-stat-label">累计单词</div></div>';
-    html += '<div class="vocab-stat"><div class="vocab-stat-value">' + reviewCount + '</div><div class="vocab-stat-label">今日待复习</div></div>';
+    html += '<div class="vocab-stat"><div class="vocab-stat-value">' + stats.totalCount + '</div><div class="vocab-stat-label">累计学习天数</div></div>';
+    html += '<div class="vocab-stat"><div class="vocab-stat-value">' + vocab.words.length + '</div><div class="vocab-stat-label">累计学习单词</div></div>';
     html += '</div>';
 
-    // 打卡面板
-    html += '<div class="panel"><div class="panel-header">📝 今日打卡</div><div class="panel-body"><form id="checkin-form" onsubmit="return false;"><div class="form-row"><div class="form-group"><label>学习时长（分钟）</label><input type="number" id="checkin-duration" min="1" max="480" value="30"></div><div class="form-group"><label>单词数量</label><input type="number" id="checkin-count" min="1" max="500" value="20"></div></div><div class="form-group"><label>备注</label><textarea id="checkin-note" placeholder="记录今天的学习心得..."></textarea></div><button type="button" class="btn btn-primary" id="btn-checkin">✓ 打卡</button></form></div></div>';
+    // 今日新词列表（截图风格）
+    html += '<div class="panel">';
+    html += '<div class="panel-body">';
+    html += '<div class="vocab-section-header">';
+    html += '<div class="vocab-section-title">📖 今日新词 <span class="vocab-count">' + todayCount + '</span></div>';
+    html += '<button class="btn btn-sm btn-learn" id="btn-mark-all">标记已学</button>';
+    html += '</div>';
 
-    // 添加单词
-    html += '<div class="panel"><div class="panel-header">➕ 添加单词</div><div class="panel-body"><div class="word-form"><input type="text" id="vocab-word" placeholder="英文单词"><input type="text" id="vocab-phonetic" placeholder="音标（可选）"><input type="text" id="vocab-meaning" placeholder="中文意思"><button class="btn btn-primary" id="btn-add-word">添加</button></div></div></div>';
+    // 添加单词（折叠在列表上方）
+    html += '<div class="word-form"><input type="text" id="vocab-word" placeholder="英文单词"><input type="text" id="vocab-phonetic" placeholder="音标"><input type="text" id="vocab-meaning" placeholder="中文意思"><button class="btn btn-primary" id="btn-add-word">添加</button></div>';
 
-    // 单词列表
-    html += '<div class="panel"><div class="panel-header">📖 单词本</div><div class="panel-body"><div class="word-list" id="word-list">';
+    html += '<div class="word-list" id="word-list">';
     if (vocab.words.length === 0) {
       html += '<div class="empty-state">还没有单词，添加一个开始吧</div>';
     } else {
-      vocab.words.slice().reverse().forEach(word => {
+      // 今日新词在前，复习单词在后
+      const sorted = vocab.words.slice().sort((a, b) => {
+        const sa = getReviewStatus(a), sb = getReviewStatus(b);
+        if (sa === 'new' && sb !== 'new') return -1;
+        if (sa !== 'new' && sb === 'new') return 1;
+        return new Date(b.createdAt) - new Date(a.createdAt);
+      });
+
+      sorted.forEach(word => {
         const status = getReviewStatus(word);
+        const isNew = status === 'new';
         html += '<div class="word-item">';
+        html += '<span class="word-star' + (word.star ? ' active' : '') + '" data-star="' + word.id + '">⭐</span>';
         html += '<div class="word-main"><div class="word-term">' + word.term + '</div>' + (word.phonetic ? '<div class="word-phonetic">' + word.phonetic + '</div>' : '') + '<div class="word-meaning">' + word.meaning + '</div></div>';
-        if (status === 'review') html += '<span class="word-review">需复习</span>';
-        html += '<div class="word-actions"><button class="btn btn-sm" data-speak="' + word.term + '">🔊 朗读</button><button class="btn btn-sm" data-speak="' + word.term + '" data-lang="en-US">🎤 跟读</button><button class="btn btn-sm btn-primary" data-learn="' + word.id + '">' + (status === 'new' ? '标记已学' : '复习完成') + '</button><button class="btn btn-sm btn-ghost" data-del-word="' + word.id + '">✕</button></div>';
+        if (!isNew && status === 'review') html += '<span class="word-review">需复习</span>';
+        html += '<div class="word-actions">';
+        html += '<button class="btn btn-sm" data-speak="' + word.term + '">🔊 朗读</button>';
+        html += '<button class="btn btn-sm" data-speak="' + word.term + '" data-lang="en-US">🎤 跟读</button>';
+        html += '<button class="btn btn-sm btn-learn" data-learn="' + word.id + '">' + (isNew ? '标记已学' : '复习完成') + '</button>';
+        html += '<button class="btn btn-sm btn-ghost" data-del-word="' + word.id + '">✕</button>';
+        html += '</div>';
         html += '</div>';
       });
     }
     html += '</div></div></div>';
+
+    // 打卡面板（精简）
+    html += '<div class="panel"><div class="panel-header">📝 今日打卡</div><div class="panel-body"><form id="checkin-form" onsubmit="return false;"><div class="form-row"><div class="form-group"><label>学习时长（分钟）</label><input type="number" id="checkin-duration" min="1" max="480" value="30"></div><div class="form-group"><label>单词数量</label><input type="number" id="checkin-count" min="1" max="500" value="20"></div></div><button type="button" class="btn btn-primary" id="btn-checkin">✓ 打卡</button></form></div></div>';
 
     // 今日推荐
     const dailyPick = getDailyPick('vocabulary');
@@ -393,6 +526,25 @@ const App = (() => {
     // 事件绑定
     document.getElementById('btn-checkin').addEventListener('click', () => handleCheckin('vocabulary'));
 
+    document.getElementById('btn-mark-all').addEventListener('click', () => {
+      const data = getVocabData();
+      let marked = 0;
+      data.words.forEach(w => {
+        if (getReviewStatus(w) === 'new') {
+          w.learnedAt = new Date().toISOString();
+          w.reviewedAt = new Date().toISOString();
+          marked++;
+        }
+      });
+      if (marked > 0) {
+        saveVocabData(data);
+        renderVocabulary();
+        toast('已标记 ' + marked + ' 个单词已学');
+      } else {
+        toast('没有新词可标记');
+      }
+    });
+
     document.getElementById('btn-add-word').addEventListener('click', () => {
       const term = document.getElementById('vocab-word').value.trim();
       const phonetic = document.getElementById('vocab-phonetic').value.trim();
@@ -402,7 +554,16 @@ const App = (() => {
       data.words.push({ id: Date.now().toString(36), term, phonetic, meaning, createdAt: new Date().toISOString() });
       saveVocabData(data);
       renderVocabulary();
-      toast('已添加单词：' + term);
+      toast('已添加：' + term);
+    });
+
+    document.querySelectorAll('[data-star]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-star');
+        const data = getVocabData();
+        const word = data.words.find(w => w.id === id);
+        if (word) { word.star = !word.star; saveVocabData(data); renderVocabulary(); }
+      });
     });
 
     document.querySelectorAll('[data-speak]').forEach(btn => {
@@ -423,7 +584,7 @@ const App = (() => {
           word.reviewedAt = new Date().toISOString();
           saveVocabData(data);
           renderVocabulary();
-          toast('复习完成：' + word.term);
+          toast('已学：' + word.term);
         }
       });
     });

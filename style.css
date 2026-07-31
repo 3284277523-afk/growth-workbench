@@ -1,15 +1,19 @@
 /* ============================================================
-   个人成长工作台 — 暖绿清新风格
-   设计：奶油白底 + 森林绿强调 + 圆角卡片 + 常驻左侧导航
+   个人成长工作台 — 深绿侧边栏 + 清新卡片风格
    ============================================================ */
 
 :root {
-  --bg: #F8F5F0;
+  --bg: #F4F6F4;
   --bg-secondary: #FFFFFF;
-  --bg-tertiary: #F0EFE9;
+  --bg-tertiary: #EDF2ED;
+  --sidebar-bg: #2D4A3E;
+  --sidebar-active: #5A9A7F;
+  --sidebar-text: rgba(255,255,255,0.75);
+  --sidebar-text-active: #FFFFFF;
   --green: #5A9A7F;
   --green-light: #E8F3EE;
   --green-dark: #417A62;
+  --green-deep: #2D4A3E;
   --text-primary: #2E2C2A;
   --text-secondary: #6B6967;
   --text-muted: #9B9997;
@@ -18,13 +22,13 @@
   --success: #5A9A7F;
   --danger: #D47070;
   --info: #7B9EC8;
-  --border: #E8E6E1;
+  --border: #E0E8E0;
   --shadow-sm: 0 2px 8px rgba(46, 44, 42, 0.06);
-  --shadow-md: 0 4px 16px rgba(46, 44, 42, 0.10);
+  --shadow-md: 0 4px 16px rgba(45, 74, 62, 0.12);
   --radius-sm: 10px;
   --radius-md: 14px;
   --radius-lg: 18px;
-  --sidebar-width: 180px;
+  --sidebar-width: 175px;
   --topbar-height: 64px;
   --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -39,6 +43,7 @@ body {
   color: var(--text-primary);
   line-height: 1.5;
   min-height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
 }
 
@@ -46,7 +51,10 @@ body {
 .app-container {
   display: flex;
   width: 100vw;
+  width: 100dvw;
+  max-width: 100vw;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -55,24 +63,25 @@ body {
   width: var(--sidebar-width);
   min-width: var(--sidebar-width);
   height: 100vh;
-  background: var(--bg-secondary);
-  border-right: 1px solid var(--border);
+  height: 100dvh;
+  background: var(--sidebar-bg);
+  border-right: none;
   display: flex;
   flex-direction: column;
-  padding: 20px 12px;
+  padding: 24px 12px;
   z-index: 100;
 }
 
 .sidebar-logo {
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .logo-icon {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   margin: 0 auto 8px;
-  background: var(--green-light);
+  background: var(--sidebar-active);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -81,16 +90,16 @@ body {
 }
 
 .sidebar-logo h1 {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--sidebar-text-active);
   letter-spacing: 0.5px;
 }
 
 .sidebar-date {
   text-align: center;
-  font-size: 0.75rem;
-  color: var(--text-muted);
+  font-size: 0.72rem;
+  color: var(--sidebar-text);
   margin-bottom: 16px;
 }
 
@@ -107,24 +116,24 @@ body {
   align-items: center;
   gap: 10px;
   width: 100%;
-  padding: 10px 12px;
+  padding: 11px 12px;
   border: none;
   border-radius: var(--radius-sm);
   background: transparent;
-  color: var(--text-secondary);
+  color: var(--sidebar-text);
   font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
 .nav-link:hover {
-  background: var(--bg);
-  color: var(--green);
+  background: rgba(255,255,255,0.08);
+  color: var(--sidebar-text-active);
 }
 
 .nav-link.active {
-  background: var(--green-light);
-  color: var(--green-dark);
+  background: var(--sidebar-active);
+  color: var(--sidebar-text-active);
   font-weight: 600;
 }
 
@@ -136,10 +145,10 @@ body {
 
 .nav-count {
   margin-left: auto;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   padding: 2px 6px;
-  background: var(--gold-light);
-  color: var(--gold);
+  background: rgba(255,255,255,0.15);
+  color: var(--sidebar-text-active);
   border-radius: 10px;
 }
 
@@ -149,7 +158,10 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  max-width: 100%;
   height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
 }
 
 /* ---------- 顶部每日好句 ---------- */
@@ -162,6 +174,7 @@ body {
   align-items: center;
   gap: 16px;
   padding: 0 20px;
+  padding-top: env(safe-area-inset-top, 0px);
   overflow-x: auto;
 }
 
@@ -193,7 +206,9 @@ body {
 .main-content {
   flex: 1;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 16px 20px 32px;
+  max-width: 100%;
 }
 
 /* ---------- 通用面板 ---------- */
@@ -341,6 +356,93 @@ body {
   border-color: var(--green);
 }
 
+/* ---------- 每日签到 ---------- */
+.signin-panel { margin-bottom: 16px; }
+
+.signin-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.signin-grid {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+}
+
+.signin-cell {
+  flex: 1;
+  text-align: center;
+  padding: 8px 4px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-tertiary);
+  transition: all 0.15s;
+}
+
+.signin-cell.signed {
+  background: var(--green-light);
+}
+
+.signin-cell.today {
+  border: 2px solid var(--green);
+}
+
+.signin-day {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.signin-date {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.signin-icon {
+  font-size: 0.75rem;
+  color: var(--green);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.signin-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 140px;
+}
+
+.signin-streak {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.signin-streak strong {
+  color: var(--green-dark);
+  font-size: 1.2rem;
+}
+
+.signin-btn {
+  width: 100%;
+  padding: 10px 0 !important;
+  font-size: 0.9rem !important;
+}
+
+.signin-btn.done {
+  background: var(--green-light) !important;
+  color: var(--green-dark) !important;
+  cursor: default;
+}
+
+.signin-hint {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
 /* 日历 */
 .calendar-panel { height: fit-content; }
 
@@ -455,6 +557,7 @@ textarea {
 .coin-bar {
   position: fixed;
   top: 12px;
+  top: calc(12px + env(safe-area-inset-top, 0px));
   right: 20px;
   z-index: 300;
 }
@@ -543,22 +646,48 @@ textarea {
 }
 
 .vocab-stat {
-  background: var(--green-light);
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
   border-radius: var(--radius-md);
-  padding: 16px;
+  padding: 18px;
   text-align: center;
+  color: #fff;
+  box-shadow: var(--shadow-sm);
 }
 
 .vocab-stat-value {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: var(--green-dark);
+  color: #fff;
 }
 
 .vocab-stat-label {
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: rgba(255,255,255,0.85);
   margin-top: 4px;
+}
+
+.vocab-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.vocab-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.vocab-count {
+  background: var(--green-light);
+  color: var(--green-dark);
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
 }
 
 .word-form {
@@ -581,33 +710,57 @@ textarea {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 14px;
+  padding: 14px;
   background: var(--bg-secondary);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
 }
 
+.word-star {
+  font-size: 1.1rem;
+  color: var(--gold);
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.word-star.active { opacity: 1; }
+
 .word-main { flex: 1; min-width: 0; }
 
 .word-term {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
+  color: var(--text-primary);
 }
 
 .word-phonetic {
   font-size: 0.78rem;
   color: var(--text-muted);
+  margin-top: 1px;
 }
 
 .word-meaning {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .word-actions {
   display: flex;
   gap: 6px;
+}
+
+.word-actions .btn {
+  background: var(--green-light);
+  color: var(--green-dark);
+  border-radius: 12px;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+}
+
+.word-actions .btn-learn {
+  background: var(--green);
+  color: #fff;
 }
 
 .word-review {
@@ -763,8 +916,33 @@ textarea {
     --topbar-height: 56px;
   }
 
+  .app-container {
+    width: 100dvw;
+    max-width: 100dvw;
+    overflow: hidden;
+  }
+
+  .content-area {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .top-bar {
+    padding: 0 12px;
+    padding-top: env(safe-area-inset-top, 12px);
+    gap: 8px;
+    min-height: calc(var(--topbar-height) + env(safe-area-inset-top, 12px));
+  }
+
+  .quote-block {
+    font-size: 0.78rem;
+  }
+
+  .quote-en { max-width: 45%; }
+
   .sidebar {
     padding: 16px 6px;
+    padding-top: calc(16px + env(safe-area-inset-top, 0px));
   }
 
   .sidebar-logo h1,
@@ -790,9 +968,19 @@ textarea {
     font-size: 1.25rem;
   }
 
-  .main-content { padding: 12px; }
-  .top-bar { padding: 0 12px; gap: 10px; }
+  .main-content { 
+    padding: 12px;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
   .stats-row { grid-template-columns: repeat(2, 1fr); }
   .daily-overview { grid-template-columns: 1fr; }
   .calendar-panel { order: -1; }
+  .word-form { flex-direction: column; }
+  .signin-row { flex-direction: column; }
+  .signin-action { min-width: auto; width: 100%; }
+  .word-item { flex-wrap: wrap; }
+  .word-actions { width: 100%; justify-content: flex-end; margin-top: 8px; }
+  .vocab-header { grid-template-columns: repeat(2, 1fr); }
 }
