@@ -58,7 +58,7 @@
 }
 
 html {
-  font-size: 17px;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -847,37 +847,130 @@ body {
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   html {
-    font-size: 17px;
+    font-size: 16px;
+  }
+
+  body {
+    line-height: 1.7;
   }
 
   .hamburger {
-    top: 12px;
-    left: 12px;
-    width: 36px;
-    height: 36px;
+    top: 10px;
+    left: 10px;
+    width: 38px;
+    height: 38px;
   }
 
   .main-content {
-    padding: 64px 16px 24px;
+    padding: 56px 14px 20px;
   }
 
   .module-header h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+  }
+
+  .module-header .module-desc {
+    font-size: 0.85rem;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 14px 16px;
+  }
+
+  .stat-card .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .panel-body {
+    padding: 14px;
+  }
+
+  .panel-header {
+    padding: 12px 14px;
+  }
+
+  .panel-header h3 {
+    font-size: 0.9rem;
   }
 
   .form-row {
     flex-direction: column;
+    gap: 10px;
   }
 
   .form-group input,
   .form-group textarea,
   .form-group select {
-    font-size: 17px;
+    font-size: 16px;
+    padding: 10px 12px;
   }
 
   .btn {
+    font-size: 0.88rem;
+    padding: 12px 20px;
+  }
+
+  .btn-sm {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  .nav-link {
+    padding: 12px 14px;
+    font-size: 0.92rem;
+  }
+
+  .sidebar {
+    padding: 56px 0 24px;
+  }
+
+  /* 日程表移动端 */
+  .s-time {
+    min-width: 60px;
+    font-size: 0.78rem;
+  }
+  .s-title {
+    font-size: 0.85rem;
+  }
+  .s-desc {
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+  .schedule-header h2 {
+    font-size: 1.2rem;
+  }
+  .s-block {
+    padding: 12px 0;
+    gap: 10px;
+  }
+
+  /* 商店移动端 */
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .shop-item {
+    padding: 14px;
+  }
+
+  /* 新闻移动端 */
+  .news-tabs {
+    gap: 6px;
+  }
+  .news-tab {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
+  .news-title {
     font-size: 0.9rem;
-    padding: 12px 24px;
+  }
+  .news-summary {
+    font-size: 0.8rem;
   }
 }
 
