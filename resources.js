@@ -148,9 +148,9 @@ const MODULE_RESOURCES = {
         label: "章法布局",
         unlockDays: 21,
         resources: [
-          { title: "硬笔书法章法布局技巧大全", url: "https://www.douyin.com/shipin/7412110567505659931", source: "抖音", duration: "系列", tip: "从选纸落款到整体布局，99%的人都不知道的章法技巧" },
+          { title: "硬笔书法章法布局技巧大全", url: "https://search.bilibili.com/all?keyword=%E7%A1%AC%E7%AC%94%E7%94%AB%E6%B3%95%E7%AB%A0%E6%B3%95%E5%B8%83%E5%B1%80", source: "B站搜索", duration: "系列", tip: "从选纸落款到整体布局，99%的人都不知道的章法技巧" },
           { title: "实用硬笔书写章法系统知识（11课时）", url: "https://www.bilibili.com/cheese/play/ep1540527", source: "B站课堂", duration: "11课时", tip: "基于硬笔字的实用书写，系统讲解章法布局知识" },
-          { title: "硬笔书法章法布局100个技巧", url: "https://www.douyin.com/zhuanti/7358333918355032064", source: "抖音", duration: "系列", tip: "章法技巧分享，快速提升卷面布局能力" },
+          { title: "硬笔书法章法布局100个技巧", url: "https://search.bilibili.com/all?keyword=%E7%A1%AC%E7%AC%94%E7%AB%A0%E6%B3%95%E5%B8%83%E5%B1%80%E6%8A%80%E5%B7%A7", source: "B站搜索", duration: "系列", tip: "章法技巧分享，快速提升卷面布局能力" },
         ]
       }
     ]
@@ -168,8 +168,8 @@ const MODULE_RESOURCES = {
         resources: [
           { title: "⭐ 入门必看：25个必备绘画练习（brokendraw核心方法）", url: "https://www.bilibili.com/video/BV1xXBKBREPw/", source: "B站", duration: "20分钟", tip: "3.6万播放/6486收藏🔥 从线条到创作，25个练习分5级难度递进，每天挑一个练" },
           { title: "零基础自学画画：控笔-抓型-五官-人体-头发（50集）", url: "https://www.bilibili.com/video/BV1xc3B6jEP8/", source: "B站", duration: "50集", tip: "【第1-5集】控笔练习：错误和正确的线条画法、直线/曲线专项" },
-          { title: "控笔技巧：素描基础控笔技巧训练", url: "https://www.douyin.com/video/7649697667246117745", source: "抖音", duration: "10分钟", tip: "380万播放，美术生都在练的控笔方法" },
-          { title: "零基础学画画：控笔+抓型+临摹进阶练习素材", url: "https://www.douyin.com/video/7536126270494919972", source: "抖音", duration: "8分钟", tip: "暑假控笔练习合集，附练习素材" },
+          { title: "控笔技巧：素描基础控笔技巧训练", url: "https://search.bilibili.com/all?keyword=%E7%B4%A0%E6%8F%8F%E6%8E%A7%E7%AC%94%E6%8A%80%E5%B7%A7%E8%AE%AD%E7%BB%83", source: "B站搜索", duration: "10分钟", tip: "美术生都在练的控笔方法，每天10分钟打基础" },
+          { title: "零基础学画画：控笔+抓型+临摹进阶练习素材", url: "https://search.bilibili.com/all?keyword=%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6%E7%94%BB%E7%94%BB%E6%8E%A7%E7%AC%94%E6%8A%93%E5%9E%8B%E4%B8%B4%E6%91%B9", source: "B站搜索", duration: "8分钟", tip: "控笔练习合集，附练习素材" },
         ]
       },
       {
@@ -178,10 +178,15 @@ const MODULE_RESOURCES = {
         unlockDays: 3,
         resources: [
           { title: "【4K】《像艺术家一样思考》：用右脑绘画（完整版117分钟）", url: "https://www.bilibili.com/video/BV1Bu411Z7eQ/", source: "B站", duration: "117分钟", tip: "8.8万播放/1.1万收藏🔥 贝蒂·艾德华官方教程：倒置临摹+盲画+阴形+显像板全套，必看" },
-          { title: "倒置临摹实战：把画颠倒过来向右脑模式切换", url: "https://www.douyin.com/video/7478629764752887077", source: "抖音", duration: "5分钟", tip: "颠覆传统的绘画训练，强制升级观察模式，每笔先看清再落笔" },
-          { title: "盲画轮廓练习：不看纸就画，眼睛看到的手移动和绘制", url: "https://www.douyin.com/video/7619922854163361019", source: "抖音", duration: "3分钟", tip: "眼手绳的基本练习，专注真实边缘线捕捉而非符号化输出" },
-          { title: "0成本在家画！大小朋友都能试的盲画练习", url: "https://www.douyin.com/video/7650804878713733545", source: "抖音", duration: "4分钟", tip: "2026年6月新作，超适合入门者的盲画跟练，什么笔什么纸都行" },
-          { title: "阴形/负空间观察训练：隐藏在空白中的艺术", url: "https://www.douyin.com/video/7487579505930915122", source: "抖音", duration: "4分钟", tip: "解锁绘画负空间，画空隙不画物体，开启全新观察视角" },
+          { title: "倒置临摹实战：把画颠倒过来向右脑模式切换", url: "https://search.bilibili.com/all?keyword=%E5%83%8F%E8%89%BA%E6%9C%AF%E5%AE%B6%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%E5%80%92%E7%BD%AE%E4%B8%B4%E6%91%B9", source: "B站搜索", duration: "5分钟", tip: "颠覆传统的绘画训练，强制升级观察模式，每笔先看清再落笔" },
+          { title: "盲画轮廓练习：不看纸就画，眼睛看到的手移动和绘制", url: "https://search.bilibili.com/all?keyword=%E7%9B%B2%E7%94%BB%E8%BD%AE%E5%BB%93%E7%BB%83%E4%B9%A0%E7%BB%98%E7%94%BB", source: "B站搜索", duration: "3分钟", tip: "眼手绳的基本练习，专注真实边缘线捕捉而非符号化输出" },
+          { title: "0成本在家画！大小朋友都能试的盲画练习", url: "https://search.bilibili.com/all?keyword=%E7%9B%B2%E7%94%BB%E7%BB%83%E4%B9%A0%E5%9C%A8%E5%AE%B6%E7%94%BB", source: "B站搜索", duration: "4分钟", tip: "超适合入门者的盲画跟练，什么笔什么纸都行" },
+          { title: "阴形/负空间观察训练：隐藏在空白中的艺术", url: "https://search.bilibili.com/all?keyword=%E8%B4%9F%E7%A9%BA%E9%97%B4%E8%A7%82%E5%AF%9F%E7%BB%98%E7%94%BB%E8%AE%AD%E7%BB%83", source: "B站搜索", duration: "4分钟", tip: "解锁绘画负空间，画空隙不画物体，开启全新观察视角" },
+          { title: "《像艺术家一样思考》第三章：左脑与右脑·花瓶与人脸练习", url: "https://search.bilibili.com/all?keyword=%E5%83%8F%E8%89%BA%E6%9C%AF%E5%AE%B6%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%E5%B7%A6%E8%84%91%E5%8F%B3%E8%84%91%E8%8A%B1%E7%93%B6%E4%BA%BA%E8%84%B8", source: "B站搜索", duration: "章节", tip: "经典左右脑切换练习，体会符号系统被打破的瞬间" },
+          { title: "《像艺术家一样思考》第五章：绕过符号系统·感知边缘", url: "https://search.bilibili.com/all?keyword=%E5%83%8F%E8%89%BA%E6%9C%AF%E5%AE%B6%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%E7%AC%AC%E4%BA%94%E7%AB%A0%E7%AC%A6%E5%8F%B7%E7%B3%BB%E7%BB%9F", source: "B站搜索", duration: "章节", tip: "学会绕过左脑的符号化捷径，真正看见事物本来的样子" },
+          { title: "《像艺术家一样思考》第七章：纯轮廓画与边线感知", url: "https://search.bilibili.com/all?keyword=%E5%83%8F%E8%89%BA%E6%9C%AF%E5%AE%B6%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%E7%BA%AF%E8%BD%AE%E5%BB%93%E7%94%BB", source: "B站搜索", duration: "章节", tip: "纯轮廓画是打破符号化绘画最有力的练习，虽然 uncomfortably 慢" },
+          { title: "《像艺术家一样思考》第九章：看见比例关系·透视与比例", url: "https://search.bilibili.com/all?keyword=%E5%83%8F%E8%89%BA%E6%9C%AF%E5%AE%B6%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%E6%AF%94%E4%BE%8B%E5%85%B3%E7%B3%BB", source: "B站搜索", duration: "章节", tip: "用显像板和量角器法训练比例感知，画什么像什么" },
+          { title: "《像艺术家一样思考》第十章：光线与阴影·四明暗系统", url: "https://search.bilibili.com/all?keyword=%E5%83%8F%E8%89%BA%E6%9C%AF%E5%AE%B6%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%E5%85%89%E7%BA%BF%E9%98%B4%E5%BD%B1", source: "B站搜索", duration: "章节", tip: "背光/投影/反射光/高光四明暗系统，让画面立体起来" },
         ]
       },
       {
@@ -199,7 +204,7 @@ const MODULE_RESOURCES = {
         unlockDays: 21,
         resources: [
           { title: "零基础自学画画50集（临摹篇）", url: "https://www.bilibili.com/video/BV1xc3B6jEP8/", source: "B站", duration: "50集", tip: "【第13-20集】五官临摹+大师作品临摹技巧" },
-          { title: "B站绘画区宝藏UP主推荐合集（含色彩与光影方向）", url: "https://www.douyin.com/video/7622917023182675174", source: "抖音", duration: "视频", tip: "整理B站绘画UP主推荐，从零基础入门到进阶提升全覆盖" },
+          { title: "B站绘画区宝藏UP主推荐合集（含色彩与光影方向）", url: "https://search.bilibili.com/all?keyword=B%E7%AB%99%E7%BB%98%E7%94%BBUP%E4%B8%BB%E6%8E%A8%E8%8D%90", source: "B站搜索", duration: "视频", tip: "整理B站绘画UP主推荐，从零基础入门到进阶提升全覆盖" },
         ]
       },
       {
@@ -208,7 +213,7 @@ const MODULE_RESOURCES = {
         unlockDays: 45,
         resources: [
           { title: "零基础自学画画50集（色彩篇）", url: "https://www.bilibili.com/video/BV1xc3B6jEP8/", source: "B站", duration: "50集", tip: "【第21-30集】色彩理论基础+冷暖对比+配色实战" },
-          { title: "B站绘画区宝藏UP主推荐合集（色彩与光影方向）", url: "https://www.douyin.com/video/7629416974355681722", source: "抖音", duration: "视频", tip: "从入门到进阶的宝藏绘画UP主，零成本提升画技" },
+          { title: "B站绘画区宝藏UP主推荐合集（色彩与光影方向）", url: "https://search.bilibili.com/all?keyword=B%E7%AB%99%E7%BB%98%E7%94%BB%E8%89%B2%E5%BD%A9%E5%85%89%E5%BD%B1UP%E4%B8%BB", source: "B站搜索", duration: "视频", tip: "从入门到进阶的宝藏绘画UP主，零成本提升画技" },
         ]
       },
       {
@@ -313,7 +318,7 @@ const MODULE_RESOURCES = {
         resources: [
           { title: "全122集零基础系统唱歌教学（腹式呼吸篇）", url: "https://www.bilibili.com/video/BV1F8326bExu/", source: "B站", duration: "122集", tip: "【片段精华 第3-5集】腹式呼吸技巧详解，吸气腹部外扩" },
           { title: "纯干货唱歌技巧：30天从零开始", url: "https://www.bilibili.com/video/BV1x8Eu6JE44/", source: "B站", duration: "系列", tip: "2026年6月新作，2400+播放，系统化唱歌教学" },
-          { title: "B站唱歌教学UP主推荐合集", url: "https://www.douyin.com/search/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%94%B1%E6%AD%8C%E6%95%99%E5%AD%A6up%E4%B8%BB%E6%8E%A8%E8%8D%90", source: "抖音", duration: "视频", tip: "声乐基础差必看的几位宝藏UP主，含自学唱歌正确顺序" },
+          { title: "B站唱歌教学UP主推荐合集", url: "https://search.bilibili.com/all?keyword=B%E7%AB%99%E5%94%B1%E6%AD%8C%E6%95%99%E5%AD%A6UP%E4%B8%BB%E6%8E%A8%E8%8D%90", source: "B站搜索", duration: "视频", tip: "声乐基础差必看的几位宝藏UP主，含自学唱歌正确顺序" },
         ]
       },
       {
@@ -394,7 +399,7 @@ const MODULE_RESOURCES = {
           { title: "60分钟全身哑铃锻炼-无重复-居家力量训练", url: "https://www.bilibili.com/video/BV177cCe5Ezn/", source: "B站", duration: "60分钟", tip: "2025年发布，全站姿无重复练习，锻炼每个肌肉群" },
           { title: "40分钟全身哑铃锻炼-无需重复-适合所有健身水平", url: "https://www.bilibili.com/video/BV1n4cQegEEm/", source: "B站", duration: "40分钟", tip: "2025年发布，增强和调理全身，保持新鲜和挑战性" },
           { title: "弹力带教程合集（26个动作详细讲解）", url: "https://www.bilibili.com/video/BV1zE411n7R2/", source: "B站", duration: "系列", tip: "弹力带是最便宜高效的居家力量器材" },
-          { title: "一副哑铃练遍全身·家庭哑铃增肌大合集", url: "https://www.douyin.com/video/7239267195774176527", source: "抖音", duration: "27分钟", tip: "卓叔增重出品，247万点赞，哑铃深蹲/卧推/划船/弯举全覆盖" },
+          { title: "一副哑铃练遍全身·家庭哑铃增肌大合集", url: "https://search.bilibili.com/all?keyword=%E5%93%91%E9%93%83%E5%85%A8%E8%BA%AB%E5%A2%9E%E8%82%8C%E5%B1%85%E5%AE%B6%E8%AE%AD%E7%BB%83", source: "B站搜索", duration: "27分钟", tip: "哑铃深蹲/卧推/划船/弯举全覆盖，居家增肌必备" },
         ]
       }
     ],

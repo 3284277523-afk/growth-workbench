@@ -39,11 +39,13 @@ const App = (() => {
     { time: '08:10', icon: '🎨', title: '画画主课', help: '光线好，精细动作最佳', module: 'drawing' },
     { time: '10:00', icon: '🎨', title: '画画第二练', help: '重复巩固进步更快', module: 'drawing' },
     { time: '11:00', icon: '📚', title: '看书 + 费曼输出', help: '输入后立刻输出', module: 'intake' },
+    { time: '11:50', icon: '🍜', title: '午饭时间', help: '好好吃饭，补充能量', module: 'schedule' },
     { time: '12:30', icon: '🎧', title: '英语听力输入', help: '饭后放松浸泡语感', module: 'vocabulary' },
     { time: '13:00', icon: '📖', title: '英语主课', help: '逻辑记忆模式上线', module: 'vocabulary' },
     { time: '14:40', icon: '🏃', title: '力量训练', help: '下午体温高，训练效果最好', module: 'sports' },
     { time: '15:40', icon: '📖', title: '英语巩固', help: '艾宾浩斯复习黄金窗口', module: 'vocabulary' },
     { time: '16:30', icon: '💬', title: '表达力训练', help: '运动后精神好，适合开口', module: 'expression' },
+    { time: '17:20', icon: '🍽️', title: '晚饭时间', help: '认真对待晚餐', module: 'schedule' },
     { time: '18:40', icon: '🚶', title: '饭后散步', help: '放松整理一天信息', module: 'schedule' },
     { time: '19:10', icon: '🎨', title: '画画自由创作', help: '白天学技，晚上表达', module: 'drawing' },
     { time: '20:10', icon: '🎵', title: '唱歌', help: '减压放松', module: 'singing' },
@@ -54,6 +56,85 @@ const App = (() => {
     { time: '22:50', icon: '📵', title: '放下手机 + 放松', help: '助眠准备', module: 'schedule' },
     { time: '23:00', icon: '😴', title: '关灯睡觉', help: '7小时睡眠保证', module: 'schedule' }
   ];
+
+  // ---------- 每日小技巧 ----------
+  const MODULE_TIPS = {
+    calligraphy: [
+      '练字不在多，在精。每天认真写 10 个字胜过随意写 100 个。',
+      '握笔要轻，手腕放松。紧绷的肌肉会传递到笔画中。',
+      '临帖前先读帖 3 分钟：看笔画走向、间距、重心，心中有谱再下笔。',
+      '悬腕比枕腕更难，但对腕力的锻炼效果翻倍，每天练 5 分钟悬腕。',
+      '楷书练结构，行书练节奏，隶书练笔力——三体交替练进步更快。',
+      '写完一个字，和字帖对比 3 个差异点，下次刻意纠正。',
+      '用田字格/米字格练字，它能帮你快速找到笔画起止位置。',
+      '字写好的关键是"布白均匀"——笔画之间的空白要大致相等。'
+    ],
+    drawing: [
+      '画画最重要的不是天赋，是观察力。每天花 5 分钟仔细看一样东西。',
+      '起稿前先画 3 条辅助线：水平中线、垂直中线、对角线，瞬间定位比例。',
+      '画不像不是手的问题，是眼睛的问题。试着把对象看成几何形状的拼图。',
+      '盲画练习每天 2 分钟：不看纸，眼睛慢慢扫过物体轮廓，手跟着移动。',
+      '倒过来画是打破左脑符号系统最快的方法——颠倒后你看到的是形状而非"眼睛""鼻子"。',
+      '负空间比正空间更容易画准。画椅子时，先画椅子腿之间的空隙。',
+      '线条有轻重缓急：暗部重、亮部轻，远处虚、近处实。',
+      '不要擦，不要擦，不要擦！错了的线也是观察过程，留着它能帮你修正。',
+      '每天画一张速写，15 分钟以内，不求好看，只求抓住动态和比例。'
+    ],
+    vocabulary: [
+      '背单词不要孤立记，用词根词缀法：1 个词根可以串起 10+ 个词。',
+      '艾宾浩斯复习比背新词更重要。今天该复习的单词优先于今天的新词。',
+      '用新学的单词造 3 个和你生活相关的句子，这样记得更牢。',
+      '影子跟读时不要看字幕，耳朵听、嘴巴跟、大脑想——三管齐下。',
+      '听不懂的地方不要立刻暂停查词，先听完整段，猜大意，第二遍再精听。',
+      '口语练习最好的素材是你自己的经历。用英语描述今天发生的一件事。',
+      '语法不用死记规则，找 3 个包含该语法的例句反复读，语感就来了。',
+      '睡前听 10 分钟英语播客，语速不用快，坚持 30 天听力会有质变。'
+    ],
+    singing: [
+      '唱歌前先练气息：深吸气 4 秒，憋 4 秒，慢呼 8 秒，重复 5 次。',
+      '腹式呼吸是唱歌的基础——吸气时肚子鼓起而非胸口抬起。',
+      '练音准先练单音：用钢琴 APP 弹一个音，跟着哼，直到完全一致。',
+      '高音不是喊出来的，是"哼"出来的——找到头腔共鸣的嗡嗡感。',
+      '咬字清晰度比音高更重要。练习绕口令能快速提升咬字能力。',
+      '录音回听是最好的老师。每次练完录下来，用耳朵给自己当评委。',
+      '唱歌时面部放松，眉毛不要皱——紧张的面部会影响声音的共鸣。'
+    ],
+    expression: [
+      '开口前用 3 秒搭框架：我要说的观点是什么？用哪个例子支撑？结论是什么？',
+      '每天找一件小事，用"观点+原因+案例+总结"结构说给镜子里的自己听。',
+      '即兴表达的核心不是"说得多好"而是"不要冷场"——卡住了就换个角度再说。',
+      '好的表达不是说得快，是说得清楚。每句话之间停顿 1 秒，效果翻倍。',
+      '讲故事比讲道理更有说服力。把想说的道理包进一个小故事里。',
+      '倾听是最好的表达准备。对方说完先复述一遍再回应，你瞬间显得专业。',
+      '每天朗读一篇好文章 5 分钟，录音后对比原文，练语感和节奏。'
+    ],
+    intake: [
+      '读完一章用费曼技巧输出：假装讲给 8 岁小孩听，讲不通的地方就是没真懂。',
+      '深度阅读前关闭手机通知，25 分钟专注 + 5 分钟休息，一轮就够了。',
+      '看书不做笔记 = 白看。至少每章写 3 个关键点 + 1 个行动计划。',
+      '交替读不同领域的书（技术→人文→传记→商业），跨界连接产生新灵感。',
+      '看纪录片时手边放笔记本，遇到触动点立刻暂停记下来，否则转瞬就忘。',
+      '不是每本书都值得读完。前 50 页决定是否继续，不要被"必须读完"绑架。'
+    ],
+    sports: [
+      '力量训练前先做 5 分钟动态拉伸：开合跳、肩绕环、髋关节环绕，预防受伤。',
+      '动作质量 > 重量。宁可做 5 个标准俯卧撑，不要做 20 个变形俯卧撑。',
+      '每组之间休息 60-90 秒，这是肌肉恢复的最佳窗口，太短太长都不好。',
+      '练完喝一杯蛋白粉/牛奶，训练后 30 分钟内补充蛋白质吸收率最高。',
+      '大基数减肥先别急着跑步，从快走开始，保护膝盖比消耗热量更重要。',
+      '核心训练不是只做卷腹。平板支撑、死虫式、鸟狗式同样重要。',
+      '每周至少休息 1 天，肌肉在休息时生长，不是在训练时。'
+    ]
+  };
+
+  function getDailyTip(module) {
+    const tips = MODULE_TIPS[module];
+    if (!tips || !tips.length) return null;
+    const today = formatDate(new Date());
+    const seed = parseInt(today.replace(/-/g, '')) || 0;
+    const idx = seed % tips.length;
+    return tips[idx];
+  }
 
   // ---------- 奖励商店 ----------
   const REWARD_SHOP = [
@@ -465,6 +546,10 @@ const App = (() => {
 
     let html = '<div class="module-header"><h2>📚 英语学习</h2><p class="module-desc">单词本 · 艾宾浩斯复习提醒</p></div>';
 
+    // 每日小技巧
+    const vocabTip = getDailyTip('vocabulary');
+    if (vocabTip) html += '<div class="daily-tip">💡 ' + vocabTip + '</div>';
+
     // 统计卡片（截图风格：两个绿色大数字卡片）
     html += '<div class="vocab-header">';
     html += '<div class="vocab-stat"><div class="vocab-stat-value">' + stats.totalCount + '</div><div class="vocab-stat-label">累计学习天数</div></div>';
@@ -520,6 +605,24 @@ const App = (() => {
     if (dailyPick) {
       html += '<div class="panel"><div class="panel-header">⭐ 今日推荐 · ' + dailyPick.stage.label + '</div><div class="panel-body"><div class="resource-item"><a href="' + dailyPick.resource.url + '" target="_blank">' + dailyPick.resource.title + '</a><div class="resource-meta"><span>' + dailyPick.resource.source + '</span><span>' + dailyPick.resource.duration + '</span></div><div class="resource-tip">💡 ' + dailyPick.resource.tip + '</div></div></div></div>';
     }
+
+    // 阶段资源（词根/听力/口语/语法/沉浸 全部显示，未解锁置灰）
+    const vocabRes = MODULE_RESOURCES['vocabulary'];
+    const vocabStageStatus = getStageStatus('vocabulary');
+    html += '<div class="panel"><div class="panel-header">📚 英语学习路径 · 已打卡 ' + vocabStageStatus.totalDays + ' 次</div><div class="panel-body">';
+    vocabRes.stages.forEach((stage, idx) => {
+      const isUnlocked = vocabStageStatus.unlockedStages.includes(idx);
+      if (isUnlocked) {
+        html += '<div class="stage-section"><div class="stage-header"><span class="stage-badge">' + stage.label + '</span><h4>阶段 ' + (idx + 1) + '</h4></div><div class="resource-list">';
+        stage.resources.forEach(r => {
+          html += '<div class="resource-item"><a href="' + r.url + '" target="_blank">' + r.title + '</a><div class="resource-meta"><span>' + r.source + '</span><span>' + r.duration + '</span></div><div class="resource-tip">💡 ' + r.tip + '</div></div>';
+        });
+        html += '</div></div>';
+      } else {
+        html += '<div class="stage-section stage-locked"><div class="stage-header"><span class="stage-badge">🔒 ' + stage.label + '</span><h4>阶段 ' + (idx + 1) + '</h4></div><div class="stage-lock-hint">需打卡 ' + stage.unlockDays + ' 天解锁</div></div>';
+      }
+    });
+    html += '</div></div>';
 
     main.innerHTML = html;
 
@@ -617,6 +720,10 @@ const App = (() => {
 
     let html = '<div class="module-header"><h2>' + res.icon + ' ' + res.name + '</h2><p class="module-desc">' + getModuleDesc(module) + '</p></div>';
 
+    // 每日小技巧
+    const tip = getDailyTip(module);
+    if (tip) html += '<div class="daily-tip">💡 ' + tip + '</div>';
+
     html += '<div class="stats-row">';
     html += '<div class="stat-card"><div class="stat-label">连续打卡</div><div class="stat-value">' + stats.streak + '<span class="stat-unit">天</span></div></div>';
     html += '<div class="stat-card"><div class="stat-label">累计时长</div><div class="stat-value">' + stats.totalDuration + '<span class="stat-unit">分钟</span></div></div>';
@@ -637,7 +744,7 @@ const App = (() => {
       html += '<div class="panel"><div class="panel-header">⭐ 今日推荐 · ' + dailyPick.stage.label + '</div><div class="panel-body"><div class="resource-item"><a href="' + dailyPick.resource.url + '" target="_blank">' + dailyPick.resource.title + '</a><div class="resource-meta"><span>' + dailyPick.resource.source + '</span><span>' + dailyPick.resource.duration + '</span></div><div class="resource-tip">💡 ' + dailyPick.resource.tip + '</div></div></div></div>';
     }
 
-    // 阶段资源
+    // 阶段资源（未解锁阶段置灰显示）
     const stageStatus = getStageStatus(module);
     html += '<div class="panel"><div class="panel-header">📚 学习资源 · 已打卡 ' + stageStatus.totalDays + ' 次</div><div class="panel-body">';
     res.stages.forEach((stage, idx) => {
@@ -648,6 +755,8 @@ const App = (() => {
           html += '<div class="resource-item"><a href="' + r.url + '" target="_blank">' + r.title + '</a><div class="resource-meta"><span>' + r.source + '</span><span>' + r.duration + '</span></div><div class="resource-tip">💡 ' + r.tip + '</div></div>';
         });
         html += '</div></div>';
+      } else {
+        html += '<div class="stage-section stage-locked"><div class="stage-header"><span class="stage-badge">🔒 ' + stage.label + '</span><h4>阶段 ' + (idx + 1) + '</h4></div><div class="stage-lock-hint">需打卡 ' + stage.unlockDays + ' 天解锁</div></div>';
       }
     });
     html += '</div></div>';

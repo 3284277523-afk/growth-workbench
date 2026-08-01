@@ -214,8 +214,9 @@ body {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 16px 24px 32px 20px;
+  padding: 16px 20px 32px 20px;
   max-width: 100%;
+  width: 100%;
 }
 
 /* ---------- 通用面板 ---------- */
@@ -547,6 +548,8 @@ body {
 }
 
 input, select, textarea {
+  width: 100%;
+  box-sizing: border-box;
   padding: 10px 12px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -613,6 +616,42 @@ textarea {
   font-size: 0.72rem;
 }
 
+/* 锁定阶段 */
+.stage-locked {
+  opacity: 0.55;
+  background: #F0F0F0;
+}
+.stage-locked .stage-badge {
+  background: #E0E0E0;
+  color: #999;
+}
+.stage-lock-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 4px 0;
+}
+
+/* 每日小技巧 */
+.daily-tip {
+  background: linear-gradient(135deg, var(--green-light) 0%, #F0F7F2 100%);
+  border-left: 3px solid var(--green);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-size: 0.82rem;
+  color: var(--green-dark);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .daily-tip {
+    font-size: 0.78rem;
+    padding: 8px 12px;
+  }
+  .stage-locked {
+    opacity: 0.5;
+  }
+}
 .resource-list { display: flex; flex-direction: column; gap: 10px; }
 
 .resource-item {
@@ -842,7 +881,7 @@ textarea {
   background: var(--bg);
   border-radius: var(--radius-md);
 }
-.finance-item-left { display: flex; align-items: center; gap: 10px; }
+.finance-item-left { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
 .finance-cat-icon { font-size: 1.2rem; }
 .finance-item-amount { font-weight: 700; }
 .finance-expense { color: var(--danger); }
