@@ -127,9 +127,9 @@ const MODULE_RESOURCES = {
         label: "基础笔画",
         unlockDays: 0,
         resources: [
-          { title: "硬笔书法零基础速成教程-基本笔画系列", url: "https://www.bilibili.com/video/BV1T4411u7uZ/", source: "B站", duration: "系列", tip: "从垂露竖到横折钩，每个笔画独立视频讲解，适合每天一个" },
-          { title: "硬笔书法基础练习：常用基本笔画规范写法", url: "https://www.bilibili.com/video/BV1H5411w7RG/", source: "B站", duration: "系列", tip: "28个基本笔画逐一示范，跟练效果极佳" },
-          { title: "硬笔基本笔画教学：竖弯钩详细讲解", url: "https://www.bilibili.com/video/BV1CV4y1H7Ei/", source: "B站", duration: "8分钟", tip: "单笔画精讲，适合每天攻克一个笔画" },
+          { title: "硬笔书法零基础速成教程-基本笔画系列", url: "https://search.bilibili.com/all?keyword=%E7%A1%AC%E7%AC%94%E4%B9%A6%E6%B3%95%E5%9F%BA%E6%9C%AC%E7%AC%94%E7%94%BB%E6%95%99%E7%A8%8B", source: "B站搜索", duration: "系列", tip: "从垂露竖到横折钩，每个笔画独立视频讲解，适合每天一个" },
+          { title: "硬笔书法基础练习：常用基本笔画规范写法", url: "https://search.bilibili.com/all?keyword=%E7%A1%AC%E7%AC%94%E4%B9%A6%E6%B3%95%E5%9F%BA%E6%9C%AC%E7%AC%94%E7%94%BB%E8%A7%84%E8%8C%83%E5%86%99%E6%B3%95", source: "B站搜索", duration: "系列", tip: "28个基本笔画逐一示范，跟练效果极佳" },
+          { title: "硬笔基本笔画教学：竖弯钩详细讲解", url: "https://search.bilibili.com/all?keyword=%E7%A1%AC%E7%AC%94%E7%AB%96%E5%BC%AF%E9%92%A9%E6%95%99%E5%AD%A6", source: "B站搜索", duration: "8分钟", tip: "单笔画精讲，适合每天攻克一个笔画" },
           { title: "零基础硬笔书法入门教程2026新版（从执笔到书写一手好字）", url: "https://www.bilibili.com/video/BV1Gig16kE3x/", source: "B站", duration: "系列", tip: "2026年7月最新，从选笔执笔到笔画章法的完整自学路线" },
         ]
       },
